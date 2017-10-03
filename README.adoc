@@ -1,4 +1,4 @@
-# Semantic UI Wrapper
+= Semantic UI Wrapper
 
 A library to interface with Semantic UI React. The NPM support in Clojurescript
 is not yet advanced enough to support using Semantic UI directly, and 
@@ -18,29 +18,46 @@ package that makes it a bit easier to use:
 library (scope is provided), so you can upgrade that library without needing this
 one to change.
 
-# Usage
+== Usage
 
-Add dependency
+1. Add the dependency to you project.
++
+image::https://img.shields.io/clojars/v/fulcrologic/semantic-ui-react-wrappers.svg[link="https://clojars.org/fulcrologic/semantic-ui-react-wrappers"]
++
+2. Use the provided factories and icons!
++
+```clj
+(ns app.ui
+  (:require [fulcrologic.semantic-ui.factories :as f]
+            [fulcrologic.semantic-ui.icons :as i))
 
-## Elements, Modules, etc.
+...
+(f/ui-button #js {:content       "Like"
+                  :icon          i/heart-icon
+                  :label         (f/ui-label #js {:as "a" :basic true :pointing "right" :content "2,000"})
+                  :labelPosition "left"})
+...
+```
+
+== Elements, Modules, etc.
 
 The wrappers in the `factories` namespace create low-level React elements,
 which use Javascript objects for their props. The docstrings on these
 symbols are derived from the JSON docstrings extracted from the real
 semantic-ui-react library.
 
-## Icons
+== Icons
 
 The `icons` namespace simply has symbol definitions for each legal string icon name. This
 allows you to use your IDE's code completion to find icon names as long as
 you can remember something about that name.
 
-# Using with CLJSJS React
+== Using with CLJSJS React
 
 Make sure you have a consistent version of React by analyzing your dependencies. Libraries like
 Om have direct dependencies on React, as does the cljsjs semantic ui package.
 
-# Using with NPM React
+== Using with NPM React
 
 1. Make sure to exclude react from all cljs deps
 2. Add react and react-dom to your npm-deps
@@ -78,7 +95,7 @@ Om have direct dependencies on React, as does the cljsjs semantic ui package.
 
 
 
-# Contributing
+== Contributing
 
 Ping the Fulcro slack channel with your idea, or create a github issue. It is a good
 idea to do that before trying to help.
@@ -86,7 +103,7 @@ idea to do that before trying to help.
 The documentation extraction step still needs to be done, so that would be
 an awesome contribution to help with.
 
-# LICENSE
+== LICENSE
 
 Copyright 2017 by Fulcrologic
 

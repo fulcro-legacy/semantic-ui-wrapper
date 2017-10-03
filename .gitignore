@@ -4,3 +4,4 @@
 figwheel_server.log
 resources/public/js
 target
+pom.xml
