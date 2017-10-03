@@ -46,6 +46,38 @@ Om have direct dependencies on React, as does the cljsjs semantic ui package.
 2. Add react and react-dom to your npm-deps
 3. Add a foreign lib config to cause the npm version to appear like the cljsjs version
 
+```
+...
+        :dependencies [...
+                       ;; STEP 1: Make sure React isn't pulled in by dependencies
+                       [org.omcljs/om "1.0.0-beta1" :exclusions [cljsjs/react cljsjs/react-dom]]
+                       ...]
+...
+       :cljsbuild    {:builds
+                      [{:id           "blah"
+                        :source-paths ["src/main"]
+                        :compiler     {:asset-path           "js/cards"
+                                       :main                 blah.core
+                                       :optimizations        :none
+                                       :output-dir           "resources/public/js/blah"
+                                       :output-to            "resources/public/js/blah.js"
+                                       ;; STEP 2: Make the NPM react also acts AS IF it were the cljsjs version
+                                       :foreign-libs         [{:provides       ["cljsjs.react"]
+                                                               :file           "node_modules/react/dist/react.js"
+                                                               :global-exports {cljsjs.react React}}
+                                                              {:provides       ["cljsjs.react.dom"]
+                                                               :file           "node_modules/react-dom/dist/react-dom.js"
+                                                               :global-exports {cljsjs.react.dom ReactDOM}}]
+                                       ;; STEP 3: Add in the correct NPM dependencies
+                                       :install-deps         true
+                                       :npm-deps             {:react                             "15.5.4"
+                                                              :react-dom                         "15.5.4"}}}]}
+...
+```
+
+
+
+
 # Contributing
 
 Ping the Fulcro slack channel with your idea, or create a github issue. It is a good
