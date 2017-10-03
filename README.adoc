@@ -20,9 +20,11 @@ one to change.
 
 == Usage
 
-1. Add the dependency to you project.
+1. Add the dependency to you project. Be sure to include your desired version of semantic-ui-react as well. The latest
+version of both are:
 +
 image::https://img.shields.io/clojars/v/fulcrologic/semantic-ui-react-wrappers.svg[link="https://clojars.org/fulcrologic/semantic-ui-react-wrappers"]
+image::https://img.shields.io/clojars/v/cljsjs/semantic-ui-react.svg[link="https://clojars.org/cljsjs/semantic-ui-react"]
 +
 2. Use the provided factories and icons!
 +
