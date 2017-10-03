@@ -7,10 +7,10 @@
 (defcard buttons
   (html
     [:div
-     (f/ui-button #js {} "A")
-     (f/ui-button #js {:content       "Like"
+     (f/button #js {} "A")
+     (f/button #js {:content       "Like"
                        :icon          i/heart-icon
-                       :label         (f/ui-label #js {:as "a" :basic true :pointing "right" :content "2,000"})
+                       :label         (f/label #js {:as "a" :basic true :pointing "right" :content "2,000"})
                        :labelPosition "left"})
-     (f/ui-button #js {} "C")
-     (f/ui-button #js {} "D")]))
+     (f/button #js {} "C")
+     (f/button #js {} "D")]))
