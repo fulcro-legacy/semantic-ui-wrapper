@@ -13,7 +13,7 @@ package that makes it a bit easier to use:
 
 - It includes symbols for all of the icon names (800+)
 - It includes factory functions for all of the elements, modules, etc.
-   - The factory functions have doc strings that summarize the props available
+   - The factory functions have doc strings that summarize the props available (COMING SOON)
 - It does not have a hard dependency on the semantic-ui-react
 library (scope is provided), so you can upgrade that library without needing this
 one to change.
@@ -45,6 +45,14 @@ Om have direct dependencies on React, as does the cljsjs semantic ui package.
 1. Make sure to exclude react from all cljs deps
 2. Add react and react-dom to your npm-deps
 3. Add a foreign lib config to cause the npm version to appear like the cljsjs version
+
+# Contributing
+
+Ping the Fulcro slack channel with your idea, or create a github issue. It is a good
+idea to do that before trying to help.
+
+The documentation extraction step still needs to be done, so that would be
+an awesome contribution to help with.
 
 # LICENSE
 
