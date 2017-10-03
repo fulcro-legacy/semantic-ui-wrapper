@@ -1,5 +1,6 @@
 (ns fulcrologic.semantic-ui.factories
   (:require
+    cljsjs.semantic-ui-react
     goog.object))
 
 (defn factory-apply

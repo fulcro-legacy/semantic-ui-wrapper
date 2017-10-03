@@ -10,16 +10,6 @@
   :source-paths ["src/main"]
   :clean-targets ^{:protect false} ["target" "resources/public/js"]
 
-  :cljsbuild {:builds [{:id           "production"
-                        :source-paths ["src/main"]
-                        :jar          true
-                        :compiler     {:asset-path    "js/prod"
-                                       :main          logins.client-main
-                                       :optimizations :advanced
-                                       :source-map    "resources/public/js/logins.js.map"
-                                       :output-dir    "resources/public/js/prod"
-                                       :output-to     "resources/public/js/logins.js"}}]}
-
   :profiles {:jar {}
              :dev {:source-paths ["src/main" "src/cards"]
                    :jvm-opts     ["-XX:-OmitStackTraceInFastThrow" "-client" "-XX:+TieredCompilation" "-XX:TieredStopAtLevel=1"
@@ -31,7 +21,7 @@
                                     :figwheel     {:devcards true}
                                     :source-paths ["src/main" "src/cards"]
                                     :compiler     {:asset-path           "js/cards"
-                                                   :main                 semantic-ui-react-wrappers.cards
+                                                   :main                 fulcrologic.cards
                                                    :optimizations        :none
                                                    :output-dir           "resources/public/js/cards"
                                                    :output-to            "resources/public/js/cards.js"
@@ -39,5 +29,5 @@
                                                    :source-map-timestamp true}}]}
 
                    :dependencies [[binaryage/devtools "0.9.4"]
-                                  [figwheel-sidecar "0.5.13" :exclusions [org.clojure/tools.reader]]
-                                  [devcards "0.2.3" :exclusions [cljsjs/react cljsjs/react-dom]]]}})
+                                  [figwheel-sidecar "0.5.13"]
+                                  [devcards "0.2.3"]]}})
