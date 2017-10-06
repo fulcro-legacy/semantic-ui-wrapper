@@ -102,10 +102,10 @@
                                                 ks))
         factories          (map (fn [k]
                                   (let [[cls subclass] (-> doc-data k :csc)]
-                                    (str "(def " (name k) "\n"
+                                    (str "(def ui-" (name k) "\n"
                                       (quoted (escaped (get doc-strings-by-key k)))
                                       "\n  "
-                                      (if (= cls subclass)
+                                      (if (or (= cls subclass) (= "" subclass))
                                         (str "(sui-factory " (quoted cls) "))\n")
                                         (str "(sui-factory " (quoted cls) " " (quoted subclass) "))\n"))))) ks)]
     (str preamble

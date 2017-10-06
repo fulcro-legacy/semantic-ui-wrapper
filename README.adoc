@@ -26,7 +26,8 @@ version of both are:
 image::https://img.shields.io/clojars/v/fulcrologic/semantic-ui-react-wrappers.svg[link="https://clojars.org/fulcrologic/semantic-ui-react-wrappers"]
 image::https://img.shields.io/clojars/v/cljsjs/semantic-ui-react.svg[link="https://clojars.org/cljsjs/semantic-ui-react"]
 +
-2. Use the provided factories and icons!
+2. Make sure you've include the semantic UI CSS (via CDN or by pulling them from that project)
+3. Use the provided factories and icons!
 +
 ```clj
 (ns app.ui

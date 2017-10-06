@@ -9,6 +9,7 @@
 
   :source-paths ["src/main"]
   :clean-targets ^{:protect false} ["target" "resources/public/js"]
+  :jar-exclusions [#"public/.*"]
 
   :profiles {:jar {}
              :dev {:source-paths ["src/main" "src/cards"]
