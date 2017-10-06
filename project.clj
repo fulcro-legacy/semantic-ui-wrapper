@@ -5,11 +5,16 @@
 
   :dependencies [[org.clojure/clojure "1.8.0" :scope "provided"]
                  [org.clojure/clojurescript "1.9.946" :scope "provided"]
+                 [fulcrologic/fulcro-spec "1.0.0-beta9"]
                  [cljsjs/semantic-ui-react "0.73.0-0" :scope "provided"]]
 
   :source-paths ["src/main"]
+  :test-paths ["src/test"]
   :clean-targets ^{:protect false} ["target" "resources/public/js"]
   :jar-exclusions [#"public/.*"]
+  :test-refresh {:report       fulcro-spec.reporters.terminal/fulcro-report
+                 :changes-only false
+                 :with-repl    true}
 
   :profiles {:jar {}
              :dev {:source-paths ["src/main" "src/cards"]
@@ -29,6 +34,8 @@
                                                    :preloads             [devtools.preload]
                                                    :source-map-timestamp true}}]}
 
+                   :plugins      [[com.jakemccrary/lein-test-refresh "0.19.0"]]
                    :dependencies [[binaryage/devtools "0.9.4"]
+                                  [org.clojure/tools.namespace "0.3.0-alpha4"]
                                   [figwheel-sidecar "0.5.13"]
                                   [devcards "0.2.3"]]}})
