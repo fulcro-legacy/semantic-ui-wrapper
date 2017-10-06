@@ -102,12 +102,13 @@ Om have direct dependencies on React, as does the cljsjs semantic ui package.
 Ping the Fulcro slack channel with your idea, or create a github issue. It is a good
 idea to do that before trying to help.
 
-=== Desired Contributions:
+== Regenerating Factories
 
-1. The documentation extraction step still needs to be done, so that would be
-an awesome contribution to help with.
-2. There are devcards (`lein run -m clojure.main script/figwheel.clj`). Adding cards to demo all of the factories
-(to ensure they are working) would be a welcome addition.
+The factories.cljs file is generated (to automatically get the docstrings). The `user`
+namespace can be run in a normal Clojure REPL, and contains a comment block at the bottom that has
+the necessary command. The input file (`docgenInfo.json`)
+comes from the real Semantic UI React project from github (clone it, install npm deps, and run
+yarn deploy:doc to generate it).
 
 == LICENSE
 
