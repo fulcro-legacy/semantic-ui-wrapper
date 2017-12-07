@@ -20,11 +20,14 @@ one to change.
 
 == Usage
 
-1. Add the dependency to you project.
+1. Add the dependency to you project. Be sure to include your desired version of semantic-ui-react as well. The latest
+version of both are:
 +
 image::https://img.shields.io/clojars/v/fulcrologic/semantic-ui-react-wrappers.svg[link="https://clojars.org/fulcrologic/semantic-ui-react-wrappers"]
+image::https://img.shields.io/clojars/v/cljsjs/semantic-ui-react.svg[link="https://clojars.org/cljsjs/semantic-ui-react"]
 +
-2. Use the provided factories and icons!
+2. Make sure you've include the semantic UI CSS (via CDN or by pulling them from that project)
+3. Use the provided factories and icons!
 +
 ```clj
 (ns app.ui
@@ -100,8 +103,13 @@ Om have direct dependencies on React, as does the cljsjs semantic ui package.
 Ping the Fulcro slack channel with your idea, or create a github issue. It is a good
 idea to do that before trying to help.
 
-The documentation extraction step still needs to be done, so that would be
-an awesome contribution to help with.
+== Regenerating Factories
+
+The factories.cljs file is generated (to automatically get the docstrings). The `user`
+namespace can be run in a normal Clojure REPL, and contains a comment block at the bottom that has
+the necessary command. The input file (`docgenInfo.json`)
+comes from the real Semantic UI React project from github (clone it, install npm deps, and run
+yarn deploy:doc to generate it).
 
 == LICENSE
 
