@@ -5,7 +5,7 @@
 
   :dependencies [[org.clojure/clojure "1.8.0" :scope "provided"]
                  [org.clojure/clojurescript "1.9.946" :scope "provided"]
-                 [fulcrologic/fulcro-spec "1.0.0-beta9"]
+                 [fulcrologic/fulcro-spec "1.0.0-beta9" :scope "test"]
                  [cljsjs/semantic-ui-react "0.73.0-0" :scope "provided"]]
 
   :source-paths ["src/main"]
