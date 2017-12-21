@@ -6,3 +6,4 @@ resources/public/js
 target
 pom.xml
 docgenInfo.json
+pom.xml.asc
