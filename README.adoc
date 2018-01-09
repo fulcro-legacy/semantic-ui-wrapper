@@ -17,6 +17,8 @@ package that makes it a bit easier to use:
 - It does not have a hard dependency on the semantic-ui-react
 library (scope is provided), so you can upgrade that library without needing this
 one to change.
+- The factories and icons are CLJC, so you can more easily code things that will be used with SSR. NOTE: The clj
+versions of the factories generate nil! The intention is for you to do SSR with something like Nashorn.
 
 == Usage
 
@@ -35,10 +37,10 @@ image::https://img.shields.io/clojars/v/cljsjs/semantic-ui-react.svg[link="https
             [fulcrologic.semantic-ui.icons :as i))
 
 ...
-(f/button #js {:content       "Like"
-               :icon          i/heart-icon
-               :label         (f/label #js {:as "a" :basic true :pointing "right" :content "2,000"})
-               :labelPosition "left"})
+(f/ui-button #js {:content       "Like"
+                  :icon          i/heart-icon
+                  :label         (f/label #js {:as "a" :basic true :pointing "right" :content "2,000"})
+                  :labelPosition "left"})
 ...
 ```
 

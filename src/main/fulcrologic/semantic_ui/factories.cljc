@@ -1,27 +1,36 @@
 (ns fulcrologic.semantic-ui.factories
-  (:require
-    cljsjs.semantic-ui-react
-    goog.object))
+  #?(:cljs
+     (:require
+       cljsjs.semantic-ui-react
+       goog.object)))
 
-(defn factory-apply
-  [class]
-  (fn [props & children]
-    (apply js/React.createElement
-      class
-      props
-      children)))
+#?(:cljs
+   (defn factory-apply
+     [class]
+     (fn [props & children]
+       (apply js/React.createElement
+         class
+         props
+         children))))
 
-(def semantic-ui js/semanticUIReact)
+#?(:cljs
+   (def semantic-ui js/semanticUIReact))
 
-(defn get-sui
-  ([cls]
-   (goog.object/get semantic-ui cls))
-  ([cls member]
-   (goog.object/getValueByKeys semantic-ui cls member)))
+#?(:cljs
+   (defn get-sui
+     ([cls]
+      (goog.object/get semantic-ui cls))
+     ([cls member]
+      (goog.object/getValueByKeys semantic-ui cls member))))
 
-(defn sui-factory
-  ([cls] (factory-apply (get-sui cls)))
-  ([cls member] (factory-apply (get-sui cls member))))
+#?(:clj
+   (defn sui-factory
+     ([cls])
+     ([cls member]))
+   :cljs
+   (defn sui-factory
+     ([cls] (factory-apply (get-sui cls)))
+     ([cls member] (factory-apply (get-sui cls member)))))
 
   (def ui-form-select
 "Sugar for <Form.Field control={Select} />.
