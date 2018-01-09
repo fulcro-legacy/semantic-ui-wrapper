@@ -1,4 +1,4 @@
-(defproject fulcrologic/semantic-ui-react-wrappers "1.0.0-alpha1"
+(defproject fulcrologic/semantic-ui-react-wrappers "1.0.0-alpha2-SNAPSHOT"
   :description "Semantic UI React Wrappers"
   :license {:name "MIT" :url "https://opensource.org/licenses/MIT"}
   :min-lein-version "2.7.0"

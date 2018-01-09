@@ -37,30 +37,39 @@
 
 
 (def preamble
-  "(ns fulcrologic.semantic-ui.factories
-  (:require
-    cljsjs.semantic-ui-react
-    goog.object))
+"(ns fulcrologic.semantic-ui.factories
+  #?(:cljs
+     (:require
+       cljsjs.semantic-ui-react
+       goog.object)))
 
-(defn factory-apply
-  [class]
-  (fn [props & children]
-    (apply js/React.createElement
-      class
-      props
-      children)))
+#?(:cljs
+   (defn factory-apply
+     [class]
+     (fn [props & children]
+       (apply js/React.createElement
+         class
+         props
+         children))))
 
-(def semantic-ui js/semanticUIReact)
+#?(:cljs
+   (def semantic-ui js/semanticUIReact))
 
-(defn get-sui
-  ([cls]
-   (goog.object/get semantic-ui cls))
-  ([cls member]
-   (goog.object/getValueByKeys semantic-ui cls member)))
+#?(:cljs
+   (defn get-sui
+     ([cls]
+      (goog.object/get semantic-ui cls))
+     ([cls member]
+      (goog.object/getValueByKeys semantic-ui cls member))))
 
-(defn sui-factory
-  ([cls] (factory-apply (get-sui cls)))
-  ([cls member] (factory-apply (get-sui cls member))))
+#?(:clj
+   (defn sui-factory
+     ([cls])
+     ([cls member]))
+   :cljs
+   (defn sui-factory
+     ([cls] (factory-apply (get-sui cls)))
+     ([cls member] (factory-apply (get-sui cls member)))))
 
   ")
 
@@ -120,6 +129,6 @@
   (function-name "src/boo/Form/FormButton.js")
   (gen-factories "docgenInfo.json")
   (->> "docgenInfo.json" (gen-factories) (filter #(re-matches #"menu" (name %))))
-  (spit (clojure.java.io/as-file "src/main/fulcrologic/semantic_ui/factories.cljs") (gen-factories "docgenInfo.json"))
+  (spit (clojure.java.io/as-file "src/main/fulcrologic/semantic_ui/factories.cljc") (gen-factories "docgenInfo.json"))
 
   )
