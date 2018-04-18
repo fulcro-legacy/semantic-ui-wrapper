@@ -7,18 +7,27 @@
 (defcard buttons
   (html
     [:div
-     (f/ui-button-group nil
-       (f/ui-button nil "A")
-       (f/ui-button nil "B")
-       (f/ui-button nil "C"))
+     (f/button-group nil
+       (f/button nil "A")
+       (f/button nil "B")
+       (f/button nil "C"))
      [:br]
-     (f/ui-button #js {} "A")
+     (f/button #js {} "A")
      [:br]
-     (f/ui-button #js {:content       "Like"
-                       :icon          i/heart-icon
-                       :label         (f/ui-label #js {:as "a" :basic true :pointing "right" :content "2,000"})
-                       :labelPosition "left"})
+     (f/button #js {:content       "Like"
+                    :icon          i/heart-icon
+                    :label         #js {:as "a" :basic true :content "2,000"}
+                    :labelPosition "left"})
      [:br]
-     (f/ui-button #js {} "C")
+     (f/button-group nil
+       (f/button #js {:icon true}
+         (f/icon #js {:name i/align-left-icon}))
+       (f/button #js {:icon true}
+         (f/icon #js {:name i/align-center-icon}))
+       (f/button #js {:icon true}
+         (f/icon #js {:name i/align-right-icon}))
+       (f/button #js {:icon true}
+         (f/icon #js {:name i/align-justify-icon})))
+     (f/button #js {} "C")
      [:br]
-     (f/ui-button #js {} "D")]))
+     (f/button #js {} "D")]))

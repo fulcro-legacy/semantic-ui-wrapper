@@ -1,11 +1,10 @@
-(defproject fulcrologic/semantic-ui-react-wrappers "2.0.0"
+(defproject fulcrologic/semantic-ui-react-wrappers "2.0.0-SNAPSHOT"
   :description "Semantic UI React Wrappers"
   :license {:name "MIT" :url "https://opensource.org/licenses/MIT"}
   :min-lein-version "2.7.0"
 
   :dependencies [[org.clojure/clojure "1.9.0" :scope "provided"]
                  [org.clojure/clojurescript "1.10.238" :scope "provided"]
-                 [fulcrologic/fulcro-spec "2.0.4" :scope "test"]
                  [cljsjs/semantic-ui-react "0.78.2-0"]]
 
   :source-paths ["src/main"]

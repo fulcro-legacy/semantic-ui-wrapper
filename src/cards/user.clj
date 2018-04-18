@@ -83,7 +83,7 @@
 
 (defn gen-factory [doc-data k]
   (let [class        (name k)
-        factory-name (str "ui-" (hyphenated class))]
+        factory-name (hyphenated class)]
     (str "(def " factory-name "\n"
       "\""
       (escaped (gen-docstring doc-data k))

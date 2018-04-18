@@ -39,6 +39,55 @@ image::https://img.shields.io/clojars/v/cljsjs/semantic-ui-react.svg[link="https
 ...
 ```
 
+== Porting from Semantic UI React Documentation Examples
+
+In generate the camel-case names are converted to a lower-case hyphenated form. Props are required,
+and since these are just js wrapper the props that you send in must be js objects (e.g. prefix
+with `#js`):
+
+React Version:
+```
+<Button
+  content='Like'
+  icon='heart'
+  label={{ as: 'a', basic: true, content: '2,048' }}
+  labelPosition='right'/>
+
+<Button.Group>
+   <Button icon>
+     <Icon name='align left' />
+   </Button>
+   <Button icon>
+     <Icon name='align center' />
+   </Button>
+   <Button icon>
+     <Icon name='align right' />
+   </Button>
+   <Button icon>
+     <Icon name='align justify' />
+   </Button>
+</Button.Group>
+```
+
+This library:
+
+```
+(f/button #js {:content       "Like"
+               :icon          i/heart-icon ; or just "heart"
+               :label         #js {:as "a" :basic true :content "2,048"}
+               :labelPosition "right"}))
+
+(f/button-group nil
+  (f/button #js {:icon true}
+    (f/icon #js {:name i/align-left-icon}))
+  (f/button #js {:icon true}
+    (f/icon #js {:name i/align-center-icon}))
+  (f/button #js {:icon true}
+    (f/icon #js {:name i/align-right-icon}))
+  (f/button #js {:icon true}
+    (f/icon #js {:name i/align-justify-icon})))
+```
+
 == Elements, Modules, etc.
 
 The wrappers in the `factories` namespace create low-level React elements,
@@ -113,7 +162,7 @@ The factories.cljs file is generated (to automatically get the docstrings). The 
 namespace can be run in a normal Clojure REPL, and contains a comment block at the bottom that has
 the necessary command. The input file (`docgenInfo.json`)
 comes from the real Semantic UI React project from github (clone it, install npm deps, and run
-yarn deploy:doc to generate it).
+yarn build:docs to generate it).
 
 == LICENSE
 
