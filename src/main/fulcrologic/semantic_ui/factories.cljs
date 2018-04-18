@@ -20,7 +20,7 @@
 (defn sui-factory
   [cls] (factory-apply (get-sui cls)))
 
-  (def accordion
+  (def ui-accordion
 "An accordion allows users to toggle the display of sections of content.
 
 Props:
@@ -30,7 +30,7 @@ Props:
   - styled (bool): Adds some basic styling to accordion panels."
   (sui-factory "Accordion"))
 
-(def accordion-accordion
+(def ui-accordion-accordion
 "An Accordion can contain sub-accordions.
 
 Props:
@@ -44,7 +44,7 @@ Props:
   - panels (custom): Shorthand array of props for Accordion."
   (sui-factory "AccordionAccordion"))
 
-(def accordion-content
+(def ui-accordion-content
 "A content sub-component for Accordion component.
 
 Props:
@@ -55,7 +55,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "AccordionContent"))
 
-(def accordion-title
+(def ui-accordion-title
 "A title sub-component for Accordion component.
 
 Props:
@@ -68,7 +68,7 @@ Props:
   - onClick (func): Called on click."
   (sui-factory "AccordionTitle"))
 
-(def advertisement
+(def ui-advertisement
 "An ad displays third-party promotional content.
 
 Props:
@@ -81,7 +81,7 @@ Props:
   - unit (enum): Varies the size of the advertisement. (medium rectangle, large rectangle, vertical rectangle, small rectangle, mobile banner, banner, vertical banner, top banner, half banner, button, square button, small button, skyscraper, wide skyscraper, leaderboard, large leaderboard, mobile leaderboard, billboard, panorama, netboard, half page, square, small square)"
   (sui-factory "Advertisement"))
 
-(def breadcrumb
+(def ui-breadcrumb
 "A breadcrumb is used to show hierarchy between content.
 
 Props:
@@ -94,7 +94,7 @@ Props:
   - size (enum): Size of Breadcrumb. (mini, tiny, small, large, big, huge, massive)"
   (sui-factory "Breadcrumb"))
 
-(def breadcrumb-divider
+(def ui-breadcrumb-divider
 "A divider sub-component for Breadcrumb component.
 
 Props:
@@ -105,7 +105,7 @@ Props:
   - icon (custom): Render as an `Icon` component with `divider` class instead of a `div`."
   (sui-factory "BreadcrumbDivider"))
 
-(def breadcrumb-section
+(def ui-breadcrumb-section
 "A section sub-component for Breadcrumb component.
 
 Props:
@@ -119,7 +119,7 @@ Props:
   - onClick (func): Called on click. When passed, the component will render as an `a`"
   (sui-factory "BreadcrumbSection"))
 
-(def button
+(def ui-button
 "A Button indicates a possible user action.
 
 Props:
@@ -152,7 +152,7 @@ Props:
   - toggle (bool): A button can be formatted to toggle on and off."
   (sui-factory "Button"))
 
-(def button-content
+(def ui-button-content
 "Used in some Button types, such as `animated`.
 
 Props:
@@ -164,7 +164,7 @@ Props:
   - visible (bool): Initially visible, hidden on hover."
   (sui-factory "ButtonContent"))
 
-(def button-group
+(def ui-button-group
 "Buttons can be grouped.
 
 Props:
@@ -192,7 +192,7 @@ Props:
   - widths (enum): Groups can have their widths divided evenly. (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen)"
   (sui-factory "ButtonGroup"))
 
-(def button-or
+(def ui-button-or
 "Button groups can contain conditionals.
 
 Props:
@@ -201,7 +201,7 @@ Props:
   - text (number|string): Or buttons can have their text localized, or adjusted by using the text prop. ()"
   (sui-factory "ButtonOr"))
 
-(def card
+(def ui-card
 "A card displays site content in a manner similar to a playing card.
 
 Props:
@@ -223,7 +223,7 @@ Props:
   - raised (bool): A Card can be formatted to raise above the page."
   (sui-factory "Card"))
 
-(def card-content
+(def ui-card-content
 "A card can contain blocks of content or extra content meant to be formatted separately from the main content.
 
 Props:
@@ -238,7 +238,7 @@ Props:
   - textAlign (enum): A card content can adjust its text alignment. (left, center, right)"
   (sui-factory "CardContent"))
 
-(def card-description
+(def ui-card-description
 "A card can contain a description with one or more paragraphs.
 
 Props:
@@ -249,7 +249,7 @@ Props:
   - textAlign (enum): A card content can adjust its text alignment. (left, center, right)"
   (sui-factory "CardDescription"))
 
-(def card-group
+(def ui-card-group
 "A group of cards.
 
 Props:
@@ -265,7 +265,7 @@ Props:
   - textAlign (enum): A card group can adjust its text alignment. (left, center, right)"
   (sui-factory "CardGroup"))
 
-(def card-header
+(def ui-card-header
 "A card can contain a header.
 
 Props:
@@ -276,7 +276,7 @@ Props:
   - textAlign (enum): A card header can adjust its text alignment. (left, center, right)"
   (sui-factory "CardHeader"))
 
-(def card-meta
+(def ui-card-meta
 "A card can contain content metadata.
 
 Props:
@@ -287,7 +287,7 @@ Props:
   - textAlign (enum): A card meta can adjust its text alignment. (left, center, right)"
   (sui-factory "CardMeta"))
 
-(def checkbox
+(def ui-checkbox
 "A checkbox allows a user to select a value from a small set of options, often binary.
 
 Props:
@@ -314,7 +314,7 @@ Props:
   - value (string|number): The HTML input value. ()"
   (sui-factory "Checkbox"))
 
-(def comment
+(def ui-comment
 "A comment displays user feedback to site content.
 
 Props:
@@ -325,7 +325,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "Comment"))
 
-(def comment-action
+(def ui-comment-action
 "A comment can contain an action.
 
 Props:
@@ -336,7 +336,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "CommentAction"))
 
-(def comment-actions
+(def ui-comment-actions
 "A comment can contain an list of actions a user may perform related to this comment.
 
 Props:
@@ -346,7 +346,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "CommentActions"))
 
-(def comment-author
+(def ui-comment-author
 "A comment can contain an author.
 
 Props:
@@ -356,7 +356,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "CommentAuthor"))
 
-(def comment-avatar
+(def ui-comment-avatar
 "A comment can contain an image or avatar.
 
 Props:
@@ -365,7 +365,7 @@ Props:
   - src (string): Specifies the URL of the image."
   (sui-factory "CommentAvatar"))
 
-(def comment-content
+(def ui-comment-content
 "A comment can contain content.
 
 Props:
@@ -375,7 +375,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "CommentContent"))
 
-(def comment-group
+(def ui-comment-group
 "Comments can be grouped.
 
 Props:
@@ -389,7 +389,7 @@ Props:
   - threaded (bool): A comment list can be threaded to showing the relationship between conversations."
   (sui-factory "CommentGroup"))
 
-(def comment-metadata
+(def ui-comment-metadata
 "A comment can contain metadata about the comment, an arbitrary amount of metadata may be defined.
 
 Props:
@@ -399,7 +399,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "CommentMetadata"))
 
-(def comment-text
+(def ui-comment-text
 "A comment can contain text.
 
 Props:
@@ -409,7 +409,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "CommentText"))
 
-(def confirm
+(def ui-confirm
 "A Confirm modal gives the user a choice to confirm or cancel an action/
 
 Props:
@@ -423,7 +423,7 @@ Props:
   - size (enum): A Confirm can vary in size (fullscreen, large, mini, small, tiny)"
   (sui-factory "Confirm"))
 
-(def container
+(def ui-container
 "A container limits content to a maximum width.
 
 Props:
@@ -436,7 +436,7 @@ Props:
   - textAlign (enum): Align container text. (left, center, right, justified)"
   (sui-factory "Container"))
 
-(def dimmer
+(def ui-dimmer
 "A dimmer hides distractions to focus attention on particular content.
 
 Props:
@@ -453,7 +453,7 @@ Props:
   - simple (bool): A dimmer can be controlled with simple prop."
   (sui-factory "Dimmer"))
 
-(def dimmer-dimmable
+(def ui-dimmer-dimmable
 "A dimmable sub-component for Dimmer.
 
 Props:
@@ -465,7 +465,7 @@ Props:
   - dimmed (bool): Controls whether or not the dim is displayed."
   (sui-factory "DimmerDimmable"))
 
-(def divider
+(def ui-divider
 "A divider visually segments content into groups.
 
 Props:
@@ -482,7 +482,7 @@ Props:
   - vertical (bool): Divider can segment content vertically."
   (sui-factory "Divider"))
 
-(def dropdown
+(def ui-dropdown
 "A dropdown allows a user to select a value from a series of options.
 
 Props:
@@ -549,7 +549,7 @@ Props:
   - wrapSelection (bool): A dropdown will go to the last element when ArrowUp is pressed on the first,"
   (sui-factory "Dropdown"))
 
-(def dropdown-divider
+(def ui-dropdown-divider
 "A dropdown menu can contain dividers to separate related content.
 
 Props:
@@ -557,7 +557,7 @@ Props:
   - className (string): Additional classes."
   (sui-factory "DropdownDivider"))
 
-(def dropdown-header
+(def ui-dropdown-header
 "A dropdown menu can contain a header.
 
 Props:
@@ -568,7 +568,7 @@ Props:
   - icon (custom): Shorthand for Icon."
   (sui-factory "DropdownHeader"))
 
-(def dropdown-item
+(def ui-dropdown-item
 "An item sub-component for Dropdown component.
 
 Props:
@@ -589,7 +589,7 @@ Props:
   - value (bool|number|string): Stored value. ()"
   (sui-factory "DropdownItem"))
 
-(def dropdown-menu
+(def ui-dropdown-menu
 "A dropdown menu can contain a menu.
 
 Props:
@@ -602,7 +602,7 @@ Props:
   - scrolling (bool): A dropdown menu can scroll."
   (sui-factory "DropdownMenu"))
 
-(def dropdown-search-input
+(def ui-dropdown-search-input
 "A search item sub-component for Dropdown component.
 
 Props:
@@ -614,7 +614,7 @@ Props:
   - value (number|string): Stored value. ()"
   (sui-factory "DropdownSearchInput"))
 
-(def embed
+(def ui-embed
 "An embed displays content from other websites like YouTube videos or Google Maps.
 
 Props:
@@ -638,7 +638,7 @@ Props:
   - url (custom): Specifies a url to use for embed."
   (sui-factory "Embed"))
 
-(def feed
+(def ui-feed
 "A feed presents user activity chronologically.
 
 Props:
@@ -649,7 +649,7 @@ Props:
   - size (enum): A feed can have different sizes. (small, large)"
   (sui-factory "Feed"))
 
-(def feed-content
+(def ui-feed-content
 "
 
 Props:
@@ -664,7 +664,7 @@ Props:
   - summary (custom): Shorthand for FeedSummary."
   (sui-factory "FeedContent"))
 
-(def feed-date
+(def ui-feed-date
 "An event or an event summary can contain a date.
 
 Props:
@@ -674,7 +674,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "FeedDate"))
 
-(def feed-event
+(def ui-feed-event
 "A feed contains an event.
 
 Props:
@@ -691,7 +691,7 @@ Props:
   - summary (custom): Shorthand for FeedSummary."
   (sui-factory "FeedEvent"))
 
-(def feed-extra
+(def ui-feed-extra
 "A feed can contain an extra content.
 
 Props:
@@ -703,7 +703,7 @@ Props:
   - text (bool): An event can contain additional text information."
   (sui-factory "FeedExtra"))
 
-(def feed-label
+(def ui-feed-label
 "An event can contain an image or icon label.
 
 Props:
@@ -715,7 +715,7 @@ Props:
   - image (custom): An event can contain image label."
   (sui-factory "FeedLabel"))
 
-(def feed-like
+(def ui-feed-like
 "A feed can contain a like element.
 
 Props:
@@ -726,7 +726,7 @@ Props:
   - icon (custom): Shorthand for icon. Mutually exclusive with children."
   (sui-factory "FeedLike"))
 
-(def feed-meta
+(def ui-feed-meta
 "A feed can contain a meta.
 
 Props:
@@ -737,7 +737,7 @@ Props:
   - like (custom): Shorthand for FeedLike."
   (sui-factory "FeedMeta"))
 
-(def feed-summary
+(def ui-feed-summary
 "A feed can contain a summary.
 
 Props:
@@ -749,7 +749,7 @@ Props:
   - user (custom): Shorthand for FeedUser."
   (sui-factory "FeedSummary"))
 
-(def feed-user
+(def ui-feed-user
 "A feed can contain a user element.
 
 Props:
@@ -759,7 +759,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "FeedUser"))
 
-(def flag
+(def ui-flag
 "A flag is is used to represent a political state.
 
 Props:
@@ -768,7 +768,7 @@ Props:
   - name (enum): Flag name, can use the two digit country code, the full name, or a common alias. (ad, andorra, ae, united arab emirates, uae, af, afghanistan, ag, antigua, ai, anguilla, al, albania, am, armenia, an, netherlands antilles, ao, angola, ar, argentina, as, american samoa, at, austria, au, australia, aw, aruba, ax, aland islands, az, azerbaijan, ba, bosnia, bb, barbados, bd, bangladesh, be, belgium, bf, burkina faso, bg, bulgaria, bh, bahrain, bi, burundi, bj, benin, bm, bermuda, bn, brunei, bo, bolivia, br, brazil, bs, bahamas, bt, bhutan, bv, bouvet island, bw, botswana, by, belarus, bz, belize, ca, canada, cc, cocos islands, cd, congo, cf, central african republic, cg, congo brazzaville, ch, switzerland, ci, cote divoire, ck, cook islands, cl, chile, cm, cameroon, cn, china, co, colombia, cr, costa rica, cs, cu, cuba ...)"
   (sui-factory "Flag"))
 
-(def form
+(def ui-form
 "A Form displays a set of related user input fields in a structured way.
 
 Props:
@@ -788,7 +788,7 @@ Props:
   - widths (enum): Forms can automatically divide fields to be equal width. (equal)"
   (sui-factory "Form"))
 
-(def form-button
+(def ui-form-button
 "Sugar for <Form.Field control={Button} />.
 
 Props:
@@ -796,7 +796,7 @@ Props:
   - control (custom): A FormField control prop."
   (sui-factory "FormButton"))
 
-(def form-checkbox
+(def ui-form-checkbox
 "Sugar for <Form.Field control={Checkbox} />.
 
 Props:
@@ -804,7 +804,7 @@ Props:
   - control (custom): A FormField control prop."
   (sui-factory "FormCheckbox"))
 
-(def form-dropdown
+(def ui-form-dropdown
 "Sugar for <Form.Field control={Dropdown} />.
 
 Props:
@@ -812,7 +812,7 @@ Props:
   - control (custom): A FormField control prop."
   (sui-factory "FormDropdown"))
 
-(def form-field
+(def ui-form-field
 "A field is a form element containing a label and an input.
 
 Props:
@@ -830,7 +830,7 @@ Props:
   - width (enum): A field can specify its width in grid columns (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen)"
   (sui-factory "FormField"))
 
-(def form-group
+(def ui-form-group
 "A set of fields can appear grouped together.
 
 Props:
@@ -843,7 +843,7 @@ Props:
   - widths (enum): Fields Groups can specify their width in grid columns or automatically divide fields to be equal width. (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen, equal)"
   (sui-factory "FormGroup"))
 
-(def form-input
+(def ui-form-input
 "Sugar for <Form.Field control={Input} />.
 
 Props:
@@ -851,7 +851,7 @@ Props:
   - control (custom): A FormField control prop."
   (sui-factory "FormInput"))
 
-(def form-radio
+(def ui-form-radio
 "Sugar for <Form.Field control={Radio} />.
 
 Props:
@@ -859,7 +859,7 @@ Props:
   - control (custom): A FormField control prop."
   (sui-factory "FormRadio"))
 
-(def form-select
+(def ui-form-select
 "Sugar for <Form.Field control={Select} />.
 
 Props:
@@ -867,7 +867,7 @@ Props:
   - control (custom): A FormField control prop."
   (sui-factory "FormSelect"))
 
-(def form-text-area
+(def ui-form-text-area
 "Sugar for <Form.Field control={TextArea} />.
 
 Props:
@@ -875,7 +875,7 @@ Props:
   - control (custom): A FormField control prop."
   (sui-factory "FormTextArea"))
 
-(def grid
+(def ui-grid
 "A grid is used to harmonize negative space in a layout.
 
 Props:
@@ -898,7 +898,7 @@ Props:
   - verticalAlign (enum): A grid can specify its vertical alignment to have all its columns vertically centered. (bottom, middle, top)"
   (sui-factory "Grid"))
 
-(def grid-column
+(def ui-grid-column
 "A column sub-component for Grid.
 
 Props:
@@ -919,7 +919,7 @@ Props:
   - width (enum): Represents width of column. (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen)"
   (sui-factory "GridColumn"))
 
-(def grid-row
+(def ui-grid-row
 "A row sub-component for Grid.
 
 Props:
@@ -937,7 +937,7 @@ Props:
   - verticalAlign (enum): A row can specify its vertical alignment to have all its columns vertically centered. (bottom, middle, top)"
   (sui-factory "GridRow"))
 
-(def header
+(def ui-header
 "A header provides a short summary of content
 
 Props:
@@ -960,7 +960,7 @@ Props:
   - textAlign (enum): Align header content. (left, center, right, justified)"
   (sui-factory "Header"))
 
-(def header-content
+(def ui-header-content
 "Header content wraps the main content when there is an adjacent Icon or Image.
 
 Props:
@@ -970,7 +970,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "HeaderContent"))
 
-(def header-subheader
+(def ui-header-subheader
 "Headers may contain subheaders.
 
 Props:
@@ -980,7 +980,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "HeaderSubheader"))
 
-(def icon
+(def ui-icon
 "An icon is a glyph used to represent something else.
 
 Props:
@@ -1002,7 +1002,7 @@ Props:
   - size (enum): Size of the icon. (mini, tiny, small, large, big, huge, massive)"
   (sui-factory "Icon"))
 
-(def icon-group
+(def ui-icon-group
 "Several icons can be used together as a group.
 
 Props:
@@ -1013,7 +1013,7 @@ Props:
   - size (enum): Size of the icon group. (mini, tiny, small, large, big, huge, massive)"
   (sui-factory "IconGroup"))
 
-(def image
+(def ui-image
 "An image is a graphic representation of something.
 
 Props:
@@ -1041,7 +1041,7 @@ Props:
   - wrapped (bool): An image can render wrapped in a `div.ui.image` as alternative HTML markup."
   (sui-factory "Image"))
 
-(def image-group
+(def ui-image-group
 "A group of images.
 
 Props:
@@ -1052,7 +1052,7 @@ Props:
   - size (enum): A group of images can be formatted to have the same size. (mini, tiny, small, medium, large, big, huge, massive)"
   (sui-factory "ImageGroup"))
 
-(def input
+(def ui-input
 "An Input is a field used to elicit a response from a user.
 
 Props:
@@ -1079,7 +1079,7 @@ Props:
   - type (string): The HTML input type."
   (sui-factory "Input"))
 
-(def item
+(def ui-item
 "An item view presents large collections of site content for display.
 
 Props:
@@ -1094,7 +1094,7 @@ Props:
   - meta (custom): Shorthand for ItemMeta component."
   (sui-factory "Item"))
 
-(def item-content
+(def ui-item-content
 "An item can contain content.
 
 Props:
@@ -1109,7 +1109,7 @@ Props:
   - verticalAlign (enum): Content can specify its vertical alignment. (bottom, middle, top)"
   (sui-factory "ItemContent"))
 
-(def item-description
+(def ui-item-description
 "An item can contain a description with a single or multiple paragraphs.
 
 Props:
@@ -1119,7 +1119,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "ItemDescription"))
 
-(def item-extra
+(def ui-item-extra
 "An item can contain extra content meant to be formatted separately from the main content.
 
 Props:
@@ -1129,7 +1129,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "ItemExtra"))
 
-(def item-group
+(def ui-item-group
 "A group of items.
 
 Props:
@@ -1144,7 +1144,7 @@ Props:
   - unstackable (bool): Prevent items from stacking on mobile."
   (sui-factory "ItemGroup"))
 
-(def item-header
+(def ui-item-header
 "An item can contain a header.
 
 Props:
@@ -1154,14 +1154,14 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "ItemHeader"))
 
-(def item-image
+(def ui-item-image
 "An item can contain an image.
 
 Props:
   - size (custom): An image may appear at different sizes."
   (sui-factory "ItemImage"))
 
-(def item-meta
+(def ui-item-meta
 "An item can contain content metadata.
 
 Props:
@@ -1171,7 +1171,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "ItemMeta"))
 
-(def label
+(def ui-label
 "A label displays content classification.
 
 Props:
@@ -1200,7 +1200,7 @@ Props:
   - tag (bool): A label can appear as a tag."
   (sui-factory "Label"))
 
-(def label-detail
+(def ui-label-detail
 "
 
 Props:
@@ -1210,7 +1210,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "LabelDetail"))
 
-(def label-group
+(def ui-label-group
 "A label can be grouped.
 
 Props:
@@ -1224,7 +1224,7 @@ Props:
   - tag (bool): Label group can share tag formatting."
   (sui-factory "LabelGroup"))
 
-(def list
+(def ui-list
 "A list groups related content.
 
 Props:
@@ -1249,7 +1249,7 @@ Props:
   - verticalAlign (enum): An element inside a list can be vertically aligned. (bottom, middle, top)"
   (sui-factory "List"))
 
-(def list-content
+(def ui-list-content
 "A list item can contain a content.
 
 Props:
@@ -1263,7 +1263,7 @@ Props:
   - verticalAlign (enum): An element inside a list can be vertically aligned. (bottom, middle, top)"
   (sui-factory "ListContent"))
 
-(def list-description
+(def ui-list-description
 "A list item can contain a description.
 
 Props:
@@ -1273,7 +1273,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "ListDescription"))
 
-(def list-header
+(def ui-list-header
 "A list item can contain a header.
 
 Props:
@@ -1283,7 +1283,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "ListHeader"))
 
-(def list-icon
+(def ui-list-icon
 "A list item can contain an icon.
 
 Props:
@@ -1291,7 +1291,7 @@ Props:
   - verticalAlign (enum): An element inside a list can be vertically aligned. (bottom, middle, top)"
   (sui-factory "ListIcon"))
 
-(def list-item
+(def ui-list-item
 "A list item can contain a set of items.
 
 Props:
@@ -1309,7 +1309,7 @@ Props:
   - value (string): A value for an ordered list."
   (sui-factory "ListItem"))
 
-(def list-list
+(def ui-list-list
 "A list can contain a sub list.
 
 Props:
@@ -1319,7 +1319,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "ListList"))
 
-(def loader
+(def ui-loader
 "A loader alerts a user to wait for an activity to complete.
 
 Props:
@@ -1335,7 +1335,7 @@ Props:
   - size (enum): Loaders can have different sizes. (mini, tiny, small, medium, large, big, huge, massive)"
   (sui-factory "Loader"))
 
-(def menu
+(def ui-menu
 "A menu displays grouped navigation actions.
 
 Props:
@@ -1366,7 +1366,7 @@ Props:
   - widths (enum): A menu can have its items divided evenly. (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen)"
   (sui-factory "Menu"))
 
-(def menu-header
+(def ui-menu-header
 "A menu item may include a header or may itself be a header.
 
 Props:
@@ -1376,7 +1376,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "MenuHeader"))
 
-(def menu-item
+(def ui-menu-item
 "A menu can contain an item.
 
 Props:
@@ -1397,7 +1397,7 @@ Props:
   - position (enum): A menu item can take left or right position. (left, right)"
   (sui-factory "MenuItem"))
 
-(def menu-menu
+(def ui-menu-menu
 "A menu can contain a sub menu.
 
 Props:
@@ -1408,7 +1408,7 @@ Props:
   - position (enum): A sub menu can take left or right position. (left, right)"
   (sui-factory "MenuMenu"))
 
-(def message
+(def ui-message
 "A message displays information that explains nearby content.
 
 Props:
@@ -1435,7 +1435,7 @@ Props:
   - warning (bool): A message may be formatted to display warning messages."
   (sui-factory "Message"))
 
-(def message-content
+(def ui-message-content
 "A message can contain a content.
 
 Props:
@@ -1445,7 +1445,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "MessageContent"))
 
-(def message-header
+(def ui-message-header
 "A message can contain a header.
 
 Props:
@@ -1455,7 +1455,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "MessageHeader"))
 
-(def message-item
+(def ui-message-item
 "A message list can contain an item.
 
 Props:
@@ -1465,7 +1465,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "MessageItem"))
 
-(def message-list
+(def ui-message-list
 "A message can contain a list of items.
 
 Props:
@@ -1475,7 +1475,7 @@ Props:
   - items (custom): Shorthand Message.Items."
   (sui-factory "MessageList"))
 
-(def modal
+(def ui-modal
 "A modal displays content that temporarily blocks interactions with the main view of a site.
 
 Props:
@@ -1504,7 +1504,7 @@ Props:
   - trigger (node): Element to be rendered in-place where the portal is defined."
   (sui-factory "Modal"))
 
-(def modal-actions
+(def ui-modal-actions
 "A modal can contain a row of actions.
 
 Props:
@@ -1516,7 +1516,7 @@ Props:
   - onActionClick (custom): Action onClick handler when using shorthand `actions`."
   (sui-factory "ModalActions"))
 
-(def modal-content
+(def ui-modal-content
 "A modal can contain content.
 
 Props:
@@ -1528,7 +1528,7 @@ Props:
   - scrolling (bool): A modal can use the entire size of the screen."
   (sui-factory "ModalContent"))
 
-(def modal-description
+(def ui-modal-description
 "A modal can have a header.
 
 Props:
@@ -1538,7 +1538,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "ModalDescription"))
 
-(def modal-header
+(def ui-modal-header
 "A modal can have a header.
 
 Props:
@@ -1548,7 +1548,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "ModalHeader"))
 
-(def mount-node
+(def ui-mount-node
 "A component that allows to manage classNames on a DOM node in declarative manner.
 
 Props:
@@ -1556,7 +1556,7 @@ Props:
   - node (custom): The DOM node where we will apply class names. Defaults to document.body."
   (sui-factory "MountNode"))
 
-(def pagination
+(def ui-pagination
 "A component to render a pagination.
 
 Props:
@@ -1575,7 +1575,7 @@ Props:
   - totalPages (number|string): Total number of pages. ()"
   (sui-factory "Pagination"))
 
-(def pagination-item
+(def ui-pagination-item
 "An item of a pagination.
 
 Props:
@@ -1586,7 +1586,7 @@ Props:
   - type (enum): A pagination should have a type. (ellipsisItem, firstItem, prevItem, pageItem, nextItem, lastItem)"
   (sui-factory "PaginationItem"))
 
-(def popup
+(def ui-popup
 "A Popup displays additional information on top of a page.
 
 Props:
@@ -1615,7 +1615,7 @@ Props:
   - wide (bool|enum): Popup width. (very)"
   (sui-factory "Popup"))
 
-(def popup-content
+(def ui-popup-content
 "A PopupContent displays the content body of a Popover.
 
 Props:
@@ -1625,7 +1625,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "PopupContent"))
 
-(def popup-header
+(def ui-popup-header
 "A PopupHeader displays a header in a Popover.
 
 Props:
@@ -1635,7 +1635,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "PopupHeader"))
 
-(def portal
+(def ui-portal
 "A component that allows you to render children outside their parent.
 
 Props:
@@ -1665,7 +1665,7 @@ Props:
   - trigger (node): Element to be rendered in-place where the portal is defined."
   (sui-factory "Portal"))
 
-(def progress
+(def ui-progress
 "A progress bar shows the progression of a task.
 
 Props:
@@ -1692,7 +1692,7 @@ Props:
   - warning (bool): A progress bar can show a warning state."
   (sui-factory "Progress"))
 
-(def radio
+(def ui-radio
 "A Radio is sugar for <Checkbox radio />.
 Useful for exclusive groups of sliders or toggles.
 
@@ -1702,7 +1702,7 @@ Props:
   - type (custom): HTML input type, either checkbox or radio."
   (sui-factory "Radio"))
 
-(def rail
+(def ui-rail
 "A rail is used to show accompanying content outside the boundaries of the main view of a site.
 
 Props:
@@ -1718,7 +1718,7 @@ Props:
   - size (enum): A rail can have different sizes. (mini, tiny, small, large, big, huge, massive)"
   (sui-factory "Rail"))
 
-(def rating
+(def ui-rating
 "A rating indicates user interest in content.
 
 Props:
@@ -1734,7 +1734,7 @@ Props:
   - size (enum): A progress bar can vary in size. (mini, tiny, small, large, huge, massive)"
   (sui-factory "Rating"))
 
-(def rating-icon
+(def ui-rating-icon
 "An internal icon sub-component for Rating component
 
 Props:
@@ -1748,7 +1748,7 @@ Props:
   - selected (bool): Indicates selection of an icon."
   (sui-factory "RatingIcon"))
 
-(def ref
+(def ui-ref
 "This component exposes a callback prop that always returns the DOM node of both functional and class component
 children.
 
@@ -1757,7 +1757,7 @@ Props:
   - innerRef (func): Called when componentDidMount."
   (sui-factory "Ref"))
 
-(def responsive
+(def ui-responsive
 "Responsive can control visibility of content.
 
 Props:
@@ -1770,7 +1770,7 @@ Props:
   - onUpdate (func): Called on update."
   (sui-factory "Responsive"))
 
-(def reveal
+(def ui-reveal
 "A reveal displays additional content in place of previous content when activated.
 
 Props:
@@ -1784,7 +1784,7 @@ Props:
   - instant (bool): An element can show its content without delay."
   (sui-factory "Reveal"))
 
-(def reveal-content
+(def ui-reveal-content
 "A content sub-component for the Reveal.
 
 Props:
@@ -1796,7 +1796,7 @@ Props:
   - visible (bool): A reveal may contain content that is hidden before user interaction."
   (sui-factory "RevealContent"))
 
-(def search
+(def ui-search
 "A search module allows a user to query for results from a selection of data
 
 Props:
@@ -1829,7 +1829,7 @@ Props:
   - value (string): Current value of the search input. Creates a controlled component."
   (sui-factory "Search"))
 
-(def search-category
+(def ui-search-category
 "
 
 Props:
@@ -1843,7 +1843,7 @@ Props:
   - results (array): Array of Search.Result props."
   (sui-factory "SearchCategory"))
 
-(def search-result
+(def ui-search-result
 "
 
 Props:
@@ -1860,7 +1860,7 @@ Props:
   - title (string): Display title."
   (sui-factory "SearchResult"))
 
-(def search-results
+(def ui-search-results
 "
 
 Props:
@@ -1870,7 +1870,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "SearchResults"))
 
-(def segment
+(def ui-segment
 "A segment is used to create a grouping of related content.
 
 Props:
@@ -1899,7 +1899,7 @@ Props:
   - vertical (bool): Formats content to be aligned vertically."
   (sui-factory "Segment"))
 
-(def segment-group
+(def ui-segment-group
 "A group of segments can be formatted to appear together.
 
 Props:
@@ -1915,14 +1915,14 @@ Props:
   - stacked (bool): Formatted to show it contains multiple pages."
   (sui-factory "SegmentGroup"))
 
-(def select
+(def ui-select
 "A Select is sugar for <Dropdown selection />.
 
 Props:
   - "
   (sui-factory "Select"))
 
-(def sidebar
+(def ui-sidebar
 "A sidebar hides additional content beside a page.
 
 Props:
@@ -1937,7 +1937,7 @@ Props:
   - width (enum): Sidebar width. (very thin, thin, wide, very wide)"
   (sui-factory "Sidebar"))
 
-(def sidebar-pushable
+(def ui-sidebar-pushable
 "A pushable sub-component for Sidebar.
 
 Props:
@@ -1947,7 +1947,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "SidebarPushable"))
 
-(def sidebar-pusher
+(def ui-sidebar-pusher
 "A pushable sub-component for Sidebar.
 
 Props:
@@ -1958,7 +1958,7 @@ Props:
   - dimmed (bool): Controls whether or not the dim is displayed."
   (sui-factory "SidebarPusher"))
 
-(def statistic
+(def ui-statistic
 "A statistic emphasizes the current value of an attribute.
 
 Props:
@@ -1976,7 +1976,7 @@ Props:
   - value (custom): Value content of the Statistic."
   (sui-factory "Statistic"))
 
-(def statistic-group
+(def ui-statistic-group
 "A group of statistics.
 
 Props:
@@ -1992,7 +1992,7 @@ Props:
   - widths (enum): A statistic group can have its items divided evenly. (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen)"
   (sui-factory "StatisticGroup"))
 
-(def statistic-label
+(def ui-statistic-label
 "A statistic can contain a label to help provide context for the presented value.
 
 Props:
@@ -2002,7 +2002,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "StatisticLabel"))
 
-(def statistic-value
+(def ui-statistic-value
 "A statistic can contain a numeric, icon, image, or text value.
 
 Props:
@@ -2013,7 +2013,7 @@ Props:
   - text (bool): Format the value with smaller font size to fit nicely beside number values."
   (sui-factory "StatisticValue"))
 
-(def step
+(def ui-step
 "A step shows the completion status of an activity in a series of activities.
 
 Props:
@@ -2033,7 +2033,7 @@ Props:
   - title (custom): Shorthand for StepTitle."
   (sui-factory "Step"))
 
-(def step-content
+(def ui-step-content
 "A step can contain a content.
 
 Props:
@@ -2045,7 +2045,7 @@ Props:
   - title (custom): Shorthand for StepTitle."
   (sui-factory "StepContent"))
 
-(def step-description
+(def ui-step-description
 "
 
 Props:
@@ -2055,7 +2055,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "StepDescription"))
 
-(def step-group
+(def ui-step-group
 "A set of steps.
 
 Props:
@@ -2074,7 +2074,7 @@ Props:
   - widths (enum): Steps can be divided evenly inside their parent. (..._.keys(numberMap), ..._.keys(numberMap).map(Number), ..._.values(numberMap))"
   (sui-factory "StepGroup"))
 
-(def step-title
+(def ui-step-title
 "A step can contain a title.
 
 Props:
@@ -2084,7 +2084,7 @@ Props:
   - content (custom): Shorthand for primary content."
   (sui-factory "StepTitle"))
 
-(def sticky
+(def ui-sticky
 "Sticky content stays fixed to the browser viewport while another column of content is visible on the page.
 
 Props:
@@ -2103,7 +2103,7 @@ Props:
   - scrollContext (object): Context which sticky should attach onscroll events."
   (sui-factory "Sticky"))
 
-(def tab
+(def ui-tab
 "A Tab is a hidden section of content activated by a Menu.
 
 Props:
@@ -2117,7 +2117,7 @@ Props:
   - renderActiveOnly (bool): A Tab can render only active pane."
   (sui-factory "Tab"))
 
-(def tab-pane
+(def ui-tab-pane
 "A tab pane holds the content of a tab.
 
 Props:
@@ -2129,7 +2129,7 @@ Props:
   - loading (bool): A Tab.Pane can display a loading indicator."
   (sui-factory "TabPane"))
 
-(def table
+(def ui-table
 "A table displays a collections of data grouped into rows.
 
 Props:
@@ -2163,7 +2163,7 @@ Props:
   - verticalAlign (enum): A table can adjust its text alignment. (bottom, middle, top)"
   (sui-factory "Table"))
 
-(def table-body
+(def ui-table-body
 "
 
 Props:
@@ -2172,7 +2172,7 @@ Props:
   - className (string): Additional classes."
   (sui-factory "TableBody"))
 
-(def table-cell
+(def ui-table-cell
 "A table row can have cells.
 
 Props:
@@ -2195,14 +2195,14 @@ Props:
   - width (enum): A table can specify the width of individual columns independently. (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen)"
   (sui-factory "TableCell"))
 
-(def table-footer
+(def ui-table-footer
 "A table can have a footer.
 
 Props:
   - as (custom): An element type to render as (string or function)."
   (sui-factory "TableFooter"))
 
-(def table-header
+(def ui-table-header
 "A table can have a header.
 
 Props:
@@ -2213,7 +2213,7 @@ Props:
   - fullWidth (bool): A definition table can have a full width header or footer, filling in the gap left by the first column."
   (sui-factory "TableHeader"))
 
-(def table-header-cell
+(def ui-table-header-cell
 "A table can have a header cell.
 
 Props:
@@ -2222,7 +2222,7 @@ Props:
   - sorted (enum): A header cell can be sorted in ascending or descending order. (ascending, descending)"
   (sui-factory "TableHeaderCell"))
 
-(def table-row
+(def ui-table-row
 "A table can have rows.
 
 Props:
@@ -2241,7 +2241,7 @@ Props:
   - warning (bool): A row may warn a user."
   (sui-factory "TableRow"))
 
-(def text-area
+(def ui-text-area
 "A TextArea can be used to allow for extended user input.
 
 Props:
@@ -2254,7 +2254,7 @@ Props:
   - value (number|string): The value of the textarea. ()"
   (sui-factory "TextArea"))
 
-(def transition
+(def ui-transition
 "A transition is an animation usually used to move content in or out of view.
 
 Props:
@@ -2272,7 +2272,7 @@ Props:
   - visible (bool): Show the component; triggers the enter or exit animation."
   (sui-factory "Transition"))
 
-(def transition-group
+(def ui-transition-group
 "A Transition.Group animates children as they mount and unmount.
 
 Props:
@@ -2282,7 +2282,7 @@ Props:
   - duration (number|shape|string): Duration of the CSS transition animation in milliseconds. ()"
   (sui-factory "TransitionGroup"))
 
-(def transitionable-portal
+(def ui-transitionable-portal
 "A sugar for `Portal` and `Transition`.
 
 Props:
@@ -2295,7 +2295,7 @@ Props:
   - transition (object): Transition props."
   (sui-factory "TransitionablePortal"))
 
-(def visibility
+(def ui-visibility
 "Visibility provides a set of callbacks for when a content appears in the viewport.
 
 Props:
