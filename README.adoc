@@ -11,14 +11,9 @@ the cljsjs support leaves a few things to be desired:
 This library is a simple set of cljs wrappers around the `cljsjs/semantic-ui-react`
 package that makes it a bit easier to use:
 
-- It includes symbols for all of the icon names (800+)
-- It includes factory functions for all of the elements, modules, etc.
-   - The factory functions have doc strings that summarize the props available (COMING SOON)
-- It does not have a hard dependency on the semantic-ui-react
-library (scope is provided), so you can upgrade that library without needing this
-one to change.
-- The factories and icons are CLJC, so you can more easily code things that will be used with SSR. NOTE: The clj
-versions of the factories generate nil! The intention is for you to do SSR with something like Nashorn.
+- It includes symbols in `icons.cljs` for all of the icon names (800+)
+- It includes factory functions in `factories.cljs` for all of the elements, modules, etc.
+   - The factory functions have doc strings that summarize the props available
 
 == Usage
 
@@ -37,10 +32,10 @@ image::https://img.shields.io/clojars/v/cljsjs/semantic-ui-react.svg[link="https
             [fulcrologic.semantic-ui.icons :as i))
 
 ...
-(f/ui-button #js {:content       "Like"
-                  :icon          i/heart-icon
-                  :label         (f/label #js {:as "a" :basic true :pointing "right" :content "2,000"})
-                  :labelPosition "left"})
+(f/button #js {:content       "Like"
+               :icon          i/heart-icon
+               :label         (f/label #js {:as "a" :basic true :pointing "right" :content "2,000"})
+               :labelPosition "left"})
 ...
 ```
 
@@ -97,8 +92,15 @@ Om have direct dependencies on React, as does the cljsjs semantic ui package.
 ...
 ```
 
+== Using With shadow-cljs
 
+Shadow-cljs is highly recommended. It has much better integration with the NPM ecosystem, which allows you to easily
+upgrade your semantic-ui-react dependency without worrying about cljsjs at all. Simply add semantic-ui-react
+to your `package.json`:
 
+```
+$ npm install --save-dev semantic-ui-react
+```
 
 == Contributing
 
