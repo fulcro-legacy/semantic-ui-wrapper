@@ -33,18 +33,19 @@ image::https://img.shields.io/clojars/v/cljsjs/semantic-ui-react.svg[link="https
             [fulcrologic.semantic-ui.icons :as i))
 
 ...
-(f/ui-button #js {:content       "Like"
+(f/ui-button {:content       "Like"
                   :icon          i/heart-icon
-                  :label         #js {:as "a" :basic true :pointing "right" :content "2,000"}
+                  :label         {:as "a" :basic true :pointing "right" :content "2,000"}
                   :labelPosition "left"})
 ...
 ```
 
 == Porting from Semantic UI React Documentation Examples
 
-Props are required, and since these are just js wrapper the props that you send in must be js objects (e.g. prefix
-with `#js`). Note that the "nested" elements with dot notation become just hyphenated names (e.g.
-`Button.Group` -> `ui-button-group`, and `List.List` -> `ui-list-list`):
+Props are required. The factories will convert them to js for you, but if you want every ounce of
+possible speed you can pre-tag your props with `#js`. Note that the "nested" elements with dot
+notation become just hyphenated names (e.g. `Button.Group` -> `ui-button-group`,
+and `List.List` -> `ui-list-list`):
 
 React Version:
 ```
@@ -73,20 +74,20 @@ React Version:
 This library:
 
 ```
-(f/ui-button #js {:content       "Like"
-                  :icon          i/heart-icon ; or just "heart"
-                  :label         #js {:as "a" :basic true :content "2,048"}
-                  :labelPosition "right"}))
+(f/ui-button {:content       "Like"
+              :icon          i/heart-icon ; or just "heart"
+              :label         {:as "a" :basic true :content "2,048"}
+              :labelPosition "right"}))
 
 (f/ui-button-group nil
-  (f/ui-button #js {:icon true}
-    (f/ui-icon #js {:name i/align-left-icon}))
-  (f/ui-button #js {:icon true}
-    (f/ui-icon #js {:name i/align-center-icon}))
-  (f/ui-button #js {:icon true}
-    (f/ui-icon #js {:name i/align-right-icon}))
-  (f/ui-button #js {:icon true}
-    (f/ui-icon #js {:name i/align-justify-icon})))
+  (f/ui-button {:icon true}
+    (f/ui-icon {:name i/align-left-icon}))
+  (f/ui-button {:icon true}
+    (f/ui-icon {:name i/align-center-icon}))
+  (f/ui-button {:icon true}
+    (f/ui-icon {:name i/align-right-icon}))
+  (f/ui-button {:icon true}
+    (f/ui-icon {:name i/align-justify-icon})))
 ```
 
 == Elements, Modules, etc.

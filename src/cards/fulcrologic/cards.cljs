@@ -12,23 +12,23 @@
        (f/ui-button nil "B")
        (f/ui-button nil "C"))
      [:br]
-     (f/ui-button #js {} "A")
+     (f/ui-button {} "A")
      [:br]
-     (f/ui-button #js {:content       "Like"
-                    :icon          i/heart-icon
-                    :label         #js {:as "a" :basic true :content "2,000"}
-                    :labelPosition "left"})
+     (f/ui-button {:content       "Like"
+                   :icon          i/heart-icon
+                   :label         {:as "a" :basic true :content "2,000"}
+                   :labelPosition "left"})
      [:br]
      (f/ui-button-group nil
-       (f/ui-button #js {:icon true}
+       (f/ui-button {:icon true}
 
-         (f/ui-icon #js {:name i/align-left-icon}))
-       (f/ui-button #js {:icon true}
-         (f/ui-icon #js {:name i/align-center-icon}))
-       (f/ui-button #js {:icon true}
-         (f/ui-icon #js {:name i/align-right-icon}))
-       (f/ui-button #js {:icon true}
-         (f/ui-icon #js {:name i/align-justify-icon})))
-     (f/ui-button #js {} "C")
+         (f/ui-icon {:name i/align-left-icon}))
+       (f/ui-button {:icon true}
+         (f/ui-icon {:name i/align-center-icon}))
+       (f/ui-button {:icon true}
+         (f/ui-icon {:name i/align-right-icon}))
+       (f/ui-button {:icon true}
+         (f/ui-icon {:name i/align-justify-icon})))
+     (f/ui-button {} "C")
      [:br]
-     (f/ui-button #js {} "D")]))
+     (f/ui-button {} "D")]))

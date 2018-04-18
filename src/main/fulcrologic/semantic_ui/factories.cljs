@@ -8,7 +8,7 @@
   (fn [props & children]
     (apply js/React.createElement
       class
-      props
+      (clj->js props)
       children)))
 
 (def semantic-ui js/semanticUIReact)
