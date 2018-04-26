@@ -37,39 +37,27 @@
 
 
 (def preamble
-"(ns fulcrologic.semantic-ui.factories
-  #?(:cljs
-     (:require
-       cljsjs.semantic-ui-react
-       goog.object)))
+  "(ns fulcrologic.semantic-ui.factories
+  (:require
+    cljsjs.semantic-ui-react
+    goog.object))
 
-#?(:cljs
-   (defn factory-apply
-     [class]
-     (fn [props & children]
-       (apply js/React.createElement
-         class
-         props
-         children))))
+(defn factory-apply
+  [class]
+  (fn [props & children]
+    (apply js/React.createElement
+      class
+      (clj->js props)
+      children)))
 
-#?(:cljs
-   (def semantic-ui js/semanticUIReact))
+(def semantic-ui js/semanticUIReact)
 
-#?(:cljs
-   (defn get-sui
-     ([cls]
-      (goog.object/get semantic-ui cls))
-     ([cls member]
-      (goog.object/getValueByKeys semantic-ui cls member))))
+(defn get-sui
+  ([cls]
+   (goog.object/get semantic-ui cls)))
 
-#?(:clj
-   (defn sui-factory
-     ([cls])
-     ([cls member]))
-   :cljs
-   (defn sui-factory
-     ([cls] (factory-apply (get-sui cls)))
-     ([cls member] (factory-apply (get-sui cls member)))))
+(defn sui-factory
+  [cls] (factory-apply (get-sui cls)))
 
   ")
 
@@ -79,56 +67,42 @@
     (str/lower-case)
     (str/replace #"^-" "")))
 
-(defn factory-name-class-and-subclass [s]
-  (let [[cls subclass] (-> s
-                         (str/replace #"^src/[^/]*/" "")
-                         (str/replace #".js$" "")
-                         (str/split #"/"))
-        name (str/replace-first subclass cls "")]
-    [(hyphenated (str "ui" cls name)) cls name]))
-
-(defn gen-docstring [doc-data k]
-  (let [entry        (get doc-data k)
-        description  (->> entry :docBlock :description (str/join "\n"))
-        props        (sort-by :name (:props entry))
+(defn gen-docstring [doc-data class]
+  (let [entry        (get doc-data class)
+        description  (get-in entry [:docBlock :description])
+        description  (if (seq description) (str/join "\n" description))
+        props        (sort-by :name (get entry :props))
         docs-by-name (map (fn [{:keys [type description name value]}]
                             (let [n (count value)]
                               (cond-> (str name " (" type "): " (first description))
-                               value (str " (" (str/join ", " (take 100 value)) (when (> n 100) " ...") ")")))) props)]
+                                value (str " (" (str/join ", " (take 100 value)) (when (> n 100) " ...") ")")))) props)]
     (str description "\n\nProps:\n  - " (str/join "\n  - " docs-by-name))))
 
 (defn quoted [s] (str "\"" s "\""))
 (defn escaped [s] (str/replace s "\"" "\\\""))
 
-(defn gen-factory [doc-data doc-strings-by-key k]
-  (let [[keywordized-name cls subclass] (some-> doc-data k :csc)]
-    (str "(def " (name keywordized-name) "\n"
-      (some-> doc-strings-by-key (get k) escaped quoted)
+(defn gen-factory [doc-data k]
+  (let [class        (name k)
+        factory-name (str "ui-" (hyphenated class))]
+    (str "(def " factory-name "\n"
+      "\""
+      (escaped (gen-docstring doc-data k))
+      "\""
       "\n  "
-      (if (= "" subclass)
-        (str "(sui-factory " (some-> cls quoted) "))\n")
-        (str "(sui-factory " (some-> cls quoted) " " (some-> subclass quoted) "))\n")))))
+      (str "(sui-factory " (quoted class) "))\n"))))
 
-(defn gen-factories [docgenInfo-json-filename]
-  (let [doc-data-by-filename      (with-open [r (clojure.java.io/reader (clojure.java.io/as-file docgenInfo-json-filename))]
-                                    (->> r clojure.data.json/read))
-        doc-data-by-factory-nm    (clojure.walk/keywordize-keys (into {} (map (fn [[filename v]]
-                                                                                [(first (factory-name-class-and-subclass filename))
-                                                                                 (assoc v :csc (factory-name-class-and-subclass filename))]) doc-data-by-filename)))
-        factory-names-as-keywords (keys doc-data-by-factory-nm)
-        doc-strings-by-key        (into (sorted-map) (map (fn [k] [k (gen-docstring doc-data-by-factory-nm k)])
-                                                       factory-names-as-keywords))
-        factories                 (map (partial gen-factory doc-data-by-factory-nm doc-strings-by-key) factory-names-as-keywords)]
-    ;factory-names-as-keywords
+(defn gen-factories []
+  (let [info      (with-open [r (clojure.java.io/reader (clojure.java.io/as-file "docgenInfo.json"))]
+                    (clojure.data.json/read r :key-fn keyword))
+        classes   (sort (keys info))
+        factories (map #(gen-factory info %) classes)]
     (str preamble
       (str/join "\n" factories))))
 
 (comment
-  (function-name "src/boo/Menu/Item.js")
-  (function-name "src/boo/Form/Form.js")
-  (function-name "src/boo/Form/FormButton.js")
-  (gen-factories "docgenInfo.json")
-  (->> "docgenInfo.json" (gen-factories) (filter #(re-matches #"menu" (name %))))
-  (spit (clojure.java.io/as-file "src/main/fulcrologic/semantic_ui/factories.cljc") (gen-factories "docgenInfo.json"))
+  ;; Generate CLJS file:
+  ;; 1. copy docgenInfo.json from semantic-ui-react/docs/app/ once you've built the docs there (yarn build:docs)
+  ;; 2. This:
+  (spit (clojure.java.io/as-file "src/main/fulcrologic/semantic_ui/factories.cljs") (gen-factories)))
 
-  )
+
