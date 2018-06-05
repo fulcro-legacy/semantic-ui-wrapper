@@ -30,7 +30,7 @@ image::https://img.shields.io/clojars/v/cljsjs/semantic-ui-react.svg[link="https
 ```clj
 (ns app.ui
   (:require [fulcrologic.semantic-ui.factories :as f]
-            [fulcrologic.semantic-ui.icons :as i))
+            [fulcrologic.semantic-ui.icons :as i])
 
 ...
 (f/ui-button {:content       "Like"
