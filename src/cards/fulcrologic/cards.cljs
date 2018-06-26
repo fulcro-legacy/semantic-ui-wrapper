@@ -8,9 +8,9 @@
             [fulcrologic.semantic-ui.factories :as f]))
 
 (defsc SomeInputs [this {:keys [name address]}]
-  {:query [:name :address]
+  {:query         [:name :address]
    :initial-state {:name "" :address ""}
-   :ident (fn [] [:component/by-id :INPUTS])}
+   :ident         (fn [] [:component/by-id :INPUTS])}
   (dom/div
     "Name:"
     (f/ui-input {:value name :onChange #(m/set-string! this :name :event %)})
@@ -26,28 +26,28 @@
 
 (defcard buttons
   (dom/div
-     (f/ui-button-group nil
-       (f/ui-button nil "A")
-       (f/ui-button nil "B")
-       (f/ui-button nil "C"))
+    (f/ui-button-group nil
+      (f/ui-button nil "A")
+      (f/ui-button nil "B")
+      (f/ui-button nil "C"))
     (dom/br)
-     (f/ui-button {} "A")
+    (f/ui-button {} "A")
     (dom/br)
-     (f/ui-button {:content       "Like"
-                   :icon          i/heart-icon
-                   :label         {:as "a" :basic true :content "2,000"}
-                   :labelPosition "left"})
+    (f/ui-button {:content       "Like"
+                  :icon          i/heart-icon
+                  :label         {:as "a" :basic true :content "2,000"}
+                  :labelPosition "left"})
     (dom/br)
-     (f/ui-button-group nil
-       (f/ui-button {:icon true}
+    (f/ui-button-group nil
+      (f/ui-button {:icon true}
 
-         (f/ui-icon {:name i/align-left-icon}))
-       (f/ui-button {:icon true}
-         (f/ui-icon {:name i/align-center-icon}))
-       (f/ui-button {:icon true}
-         (f/ui-icon {:name i/align-right-icon}))
-       (f/ui-button {:icon true}
-         (f/ui-icon {:name i/align-justify-icon})))
-     (f/ui-button {} "C")
+        (f/ui-icon {:name i/align-left-icon}))
+      (f/ui-button {:icon true}
+        (f/ui-icon {:name i/align-center-icon}))
+      (f/ui-button {:icon true}
+        (f/ui-icon {:name i/align-right-icon}))
+      (f/ui-button {:icon true}
+        (f/ui-icon {:name i/align-justify-icon})))
+    (f/ui-button {} "C")
     (dom/br)
     (f/ui-button {} "D")))
