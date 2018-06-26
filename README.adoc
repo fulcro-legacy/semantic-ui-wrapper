@@ -167,6 +167,8 @@ the necessary command. The input file (`docgenInfo.json`)
 comes from the real Semantic UI React project from github (clone it, install npm deps, and run
 yarn build:docs to generate it).
 
+IMPORTANT: You'll need to re-create the wrapped factories for inputs if you do this (TODO: fix that)
+
 == LICENSE
 
 Copyright 2017 by Fulcrologic

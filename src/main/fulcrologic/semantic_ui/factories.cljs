@@ -1,7 +1,8 @@
 (ns fulcrologic.semantic-ui.factories
   (:require
     cljsjs.semantic-ui-react
-    goog.object))
+    goog.object
+    [fulcro.client.dom :as dom]))
 
 (defn factory-apply
   [class]
@@ -11,6 +12,12 @@
       (clj->js props)
       children)))
 
+(defn wrapped-factory-apply
+  "Returns a factory that wraps the given class as an input. Requires that the target item support `:value` as a prop."
+  [class]
+  (let [factory (dom/wrap-form-element class)]
+    (fn [props] (factory (clj->js props)))))
+
 (def semantic-ui js/semanticUIReact)
 
 (defn get-sui
@@ -19,6 +26,10 @@
 
 (defn sui-factory
   [cls] (factory-apply (get-sui cls)))
+
+(defn sui-input-factory
+  [cls]
+  (wrapped-factory-apply (get-sui cls)))
 
   (def ui-accordion
 "An accordion allows users to toggle the display of sections of content.
@@ -547,7 +558,7 @@ Props:
   - upward (bool): A dropdown can open upward.
   - value (bool|string|number|arrayOf): Current value or value array if multiple. Creates a controlled component. ()
   - wrapSelection (bool): A dropdown will go to the last element when ArrowUp is pressed on the first,"
-  (sui-factory "Dropdown"))
+  (sui-input-factory "Dropdown"))
 
 (def ui-dropdown-divider
 "A dropdown menu can contain dividers to separate related content.
@@ -612,7 +623,7 @@ Props:
   - tabIndex (number|string): An input can receive focus. ()
   - type (string): The HTML input type.
   - value (number|string): Stored value. ()"
-  (sui-factory "DropdownSearchInput"))
+  (sui-input-factory "DropdownSearchInput"))
 
 (def ui-embed
 "An embed displays content from other websites like YouTube videos or Google Maps.
@@ -1077,7 +1088,7 @@ Props:
   - tabIndex (number|string): An Input can receive focus. ()
   - transparent (bool): Transparent Input has no background.
   - type (string): The HTML input type."
-  (sui-factory "Input"))
+  (sui-input-factory "Input"))
 
 (def ui-item
 "An item view presents large collections of site content for display.
@@ -1827,7 +1838,7 @@ Props:
   - showNoResults (bool): Whether a \"no results\" message should be shown if no results are found.
   - size (enum): A search can have different sizes. (mini, tiny, small, large, big, huge, massive)
   - value (string): Current value of the search input. Creates a controlled component."
-  (sui-factory "Search"))
+  (sui-input-factory "Search"))
 
 (def ui-search-category
 "
@@ -2252,7 +2263,7 @@ Props:
   - rows (number|string): Indicates row count for a TextArea. ()
   - style (object): Custom TextArea style.
   - value (number|string): The value of the textarea. ()"
-  (sui-factory "TextArea"))
+  (sui-input-factory "TextArea"))
 
 (def ui-transition
 "A transition is an animation usually used to move content in or out of view.
