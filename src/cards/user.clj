@@ -50,6 +50,12 @@
       (clj->js props)
       children)))
 
+(defn wrapped-factory-apply
+  \"Returns a factory that wraps the given class as an input. Requires that the target item support `:value` as a prop.\"
+  [class]
+  (let [factory (dom/wrap-form-element class)]
+    (fn [props] (factory (clj->js props))))
+
 (def semantic-ui js/semanticUIReact)
 
 (defn get-sui
@@ -58,6 +64,10 @@
 
 (defn sui-factory
   [cls] (factory-apply (get-sui cls)))
+
+(defn sui-input-factory
+  [cls]
+  (wrapped-factory-apply (get-sui cls)))
 
   ")
 
@@ -81,15 +91,28 @@
 (defn quoted [s] (str "\"" s "\""))
 (defn escaped [s] (str/replace s "\"" "\\\""))
 
+(def input-factory-classes
+  #{"Dropdown"
+    "DropdownSearchInput"
+    "Input"
+    "Search"
+    "TextArea"})
+
+(defn factory [class]
+  (if (contains? input-factory-classes class)
+    "sui-input-factory"
+    "sui-factory"))
+
 (defn gen-factory [doc-data k]
   (let [class        (name k)
-        factory-name (str "ui-" (hyphenated class))]
+        factory-name (str "ui-" (hyphenated class))
+        factory      (factory class)]
     (str "(def " factory-name "\n"
       "\""
       (escaped (gen-docstring doc-data k))
       "\""
       "\n  "
-      (str "(sui-factory " (quoted class) "))\n"))))
+      (str "(" factory " " (quoted class) "))\n"))))
 
 (defn gen-factories []
   (let [info      (with-open [r (clojure.java.io/reader (clojure.java.io/as-file "docgenInfo.json"))]
