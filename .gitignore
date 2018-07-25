@@ -4,6 +4,6 @@
 figwheel_server.log
 resources/public/js
 target
+componentInfo
 pom.xml
-docgenInfo.json
 pom.xml.asc
