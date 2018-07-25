@@ -163,11 +163,9 @@ idea to do that before trying to help.
 
 The factories.cljs file is generated (to automatically get the docstrings). The `user`
 namespace can be run in a normal Clojure REPL, and contains a comment block at the bottom that has
-the necessary command. The input file (`docgenInfo.json`)
-comes from the real Semantic UI React project from github (clone it, install npm deps, and run
+the necessary command. The input files (`componentInfo/*.info.json`)
+come from the real Semantic UI React project from github (clone it, install npm deps, and run
 yarn build:docs to generate it).
-
-IMPORTANT: You'll need to re-create the wrapped factories for inputs if you do this (TODO: fix that)
 
 == LICENSE
 
