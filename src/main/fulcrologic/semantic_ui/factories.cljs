@@ -66,6 +66,17 @@
     - content (custom): Shorthand for primary content."
   (sui-factory "AccordionContent"))
 
+(def ui-accordion-panel
+  "A panel sub-component for Accordion component.
+
+  Props:
+    - active (bool): Whether or not the title is in the open state.
+    - content (custom): A shorthand for Accordion.Content.
+    - index (number|string): A panel index. ()
+    - onTitleClick (func): Called when a panel title is clicked.
+    - title (custom): A shorthand for Accordion.Title."
+  (sui-factory "AccordionPanel"))
+
 (def ui-accordion-title
   "A title sub-component for Accordion component.
 
@@ -157,6 +168,7 @@
     - onClick (func): Called after user's click.
     - positive (bool): A button can hint towards a positive consequence.
     - primary (bool): A button can be formatted to show different levels of emphasis.
+    - role (string): The role of the HTML element.
     - secondary (bool): A button can be formatted to show different levels of emphasis.
     - size (enum): A button can have different sizes. (mini, tiny, small, medium, large, big, huge, massive)
     - tabIndex (number|string): A button can receive focus. ()
@@ -452,16 +464,7 @@
 
   Props:
     - active (bool): An active dimmer will dim its parent container.
-    - as (custom): An element type to render as (string or function).
-    - children (node): Primary content.
-    - className (string): Additional classes.
-    - content (custom): Shorthand for primary content.
-    - disabled (bool): A disabled dimmer cannot be activated
-    - inverted (bool): A dimmer can be formatted to have its colors inverted.
-    - onClick (func): Called on click.
-    - onClickOutside (func): Handles click outside Dimmer's content, but inside Dimmer area.
-    - page (bool): A dimmer can be formatted to be fixed to the page.
-    - simple (bool): A dimmer can be controlled with simple prop."
+    - page (bool): A dimmer can be formatted to be fixed to the page."
   (sui-factory "Dimmer"))
 
 (def ui-dimmer-dimmable
@@ -475,6 +478,24 @@
     - content (custom): Shorthand for primary content.
     - dimmed (bool): Controls whether or not the dim is displayed."
   (sui-factory "DimmerDimmable"))
+
+(def ui-dimmer-inner
+  "
+
+  Props:
+    - active (bool): An active dimmer will dim its parent container.
+    - as (custom): An element type to render as (string or function).
+    - children (node): Primary content.
+    - className (string): Additional classes.
+    - content (custom): Shorthand for primary content.
+    - disabled (bool): A disabled dimmer cannot be activated
+    - inverted (bool): A dimmer can be formatted to have its colors inverted.
+    - onClick (func): Called on click.
+    - onClickOutside (func): Handles click outside Dimmer's content, but inside Dimmer area.
+    - page (bool): A dimmer can be formatted to be fixed to the page.
+    - simple (bool): A dimmer can be controlled with simple prop.
+    - verticalAlign (enum): A dimmer can have its content top or bottom aligned. (bottom, top)"
+  (sui-factory "DimmerInner"))
 
 (def ui-divider
   "A divider visually segments content into groups.
@@ -512,7 +533,8 @@
     - defaultOpen (bool): Initial value of open.
     - defaultSearchQuery (string): Initial value of searchQuery.
     - defaultSelectedLabel (custom): Currently selected label in multi-select.
-    - defaultValue (number|string|arrayOf): Initial value or value array if multiple. ()
+    - defaultUpward (bool): Initial value of upward.
+    - defaultValue (number|string|bool|arrayOf): Initial value or value array if multiple. ()
     - direction (enum): A dropdown menu can open to the left or to the right. (left, right)
     - disabled (bool): A disabled dropdown menu or item does not allow user interaction.
     - error (bool): An errored dropdown can alert a user to a problem.
@@ -523,6 +545,7 @@
     - inline (bool): A dropdown can be formatted to appear inline in other content.
     - item (bool): A dropdown can be formatted as a Menu item.
     - labeled (bool): A dropdown can be labeled.
+    - lazyLoad (bool): A dropdown can defer rendering its options until it is open.
     - loading (bool): A dropdown can show that it is currently loading data.
     - minCharacters (number): The minimum characters for a search to begin showing results.
     - multiple (bool): A selection dropdown can allow multiple selections.
@@ -555,7 +578,7 @@
     - tabIndex (number|string): A dropdown can receive focus. ()
     - text (string): The text displayed in the dropdown, usually for the active item.
     - trigger (custom): Custom element to trigger the menu to become visible. Takes place of 'text'.
-    - upward (bool): A dropdown can open upward.
+    - upward (bool): Controls whether the dropdown will open upward.
     - value (bool|string|number|arrayOf): Current value or value array if multiple. Creates a controlled component. ()
     - wrapSelection (bool): A dropdown will go to the last element when ArrowUp is pressed on the first,"
   (sui-input-factory "Dropdown"))
@@ -618,6 +641,7 @@
 
   Props:
     - as (custom): An element type to render as (string or function).
+    - autoComplete (string): An input can have the auto complete.
     - className (string): Additional classes.
     - inputRef (func): A ref handler for input.
     - tabIndex (number|string): An input can receive focus. ()
@@ -875,7 +899,8 @@
 
   Props:
     - as (custom): An element type to render as (string or function).
-    - control (custom): A FormField control prop."
+    - control (custom): A FormField control prop.
+    - options (arrayOf): Array of Dropdown.Item props e.g. `{ text: '', value: '' }` ([:name \"shape\"], [:value \"Dropdown.Item.propTypes\"], [:computed true])"
   (sui-factory "FormSelect"))
 
 (def ui-form-text-area
@@ -995,6 +1020,7 @@
   "An icon is a glyph used to represent something else.
 
   Props:
+    - aria-hidden (string): Icon can have an aria label.
     - aria-label (string): Icon can have an aria label.
     - as (custom): An element type to render as (string or function).
     - bordered (bool): Formatted to appear bordered.
@@ -1008,7 +1034,7 @@
     - inverted (bool): Formatted to have its colors inverted for contrast.
     - link (bool): Icon can be formatted as a link.
     - loading (bool): Icon can be used as a simple loader.
-    - name (enum): Name of the icon. (search, mail outline, signal, setting, home, inbox, browser, tag, tags, image, calendar, comment, shop, comments, external, privacy, settings, trophy, payment, feed, alarm outline, tasks, cloud, lab, mail, dashboard, comment outline, comments outline, sitemap, idea, alarm, terminal, code, protect, calendar outline, ticket, external square, bug, mail square, history, options, text telephone, find, wifi, alarm mute, alarm mute outline, copyright, at, eyedropper, paint brush, heartbeat, mouse pointer, hourglass empty, hourglass start, hourglass half, hourglass end, hourglass full, hand pointer, trademark, registered, creative commons, add to calendar, remove from calendar, delete calendar, checked calendar, industry, shopping bag, shopping basket, hashtag, percent, address book, address book outline, address card, address card outline, id badge, id card, id card outline, podcast, window close, window close outline, window maximize, window minimize, window restore, wait, download, repeat, refresh, lock, bookmark, print, write, adjust, theme, edit, external share, ban, mail forward, share, expand, compress ...)
+    - name (enum): Name of the icon. (american sign language interpreting, assistive listening systems, audio description, blind, braille, closed captioning, closed captioning outline, deaf, low vision, phone volume, question circle, question circle outline, sign language, tty, universal access, wheelchair, angle double down, angle double left, angle double right, angle double up, angle down, angle left, angle right, angle up, arrow alternate circle down, arrow alternate circle down outline, arrow alternate circle left, arrow alternate circle left outline, arrow alternate circle right, arrow alternate circle right outline, arrow alternate circle up, arrow alternate circle up outline, arrow circle down, arrow circle left, arrow circle right, arrow circle up, arrow down, arrow left, arrow right, arrow up, arrows alternate, arrows alternate horizontal, arrows alternate vertical, caret down, caret left, caret right, caret square down, caret square down outline, caret square left, caret square left outline, caret square right, caret square right outline, caret square up, caret square up outline, caret up, cart arrow down, chart line, chevron circle down, chevron circle left, chevron circle right, chevron circle up, chevron down, chevron left, chevron right, chevron up, cloud download, cloud upload, download, exchange, expand arrows alternate, external alternate, external square alternate, hand point down, hand point down outline, hand point left, hand point left outline, hand point right, hand point right outline, hand point up, hand point up outline, hand pointer, hand pointer outline, history, level down alternate, level up alternate, location arrow, long arrow alternate down, long arrow alternate left, long arrow alternate right, long arrow alternate up, mouse pointer, play, random, recycle, redo, redo alternate, reply, reply all, retweet, share ...)
     - rotated (enum): Icon can rotated. (clockwise, counterclockwise)
     - size (enum): Size of the icon. (mini, tiny, small, large, big, huge, massive)"
   (sui-factory "Icon"))
@@ -1493,6 +1519,7 @@
     - actions (custom): Shorthand for Modal.Actions. Typically an array of button shorthand.
     - as (custom): An element type to render as (string or function).
     - basic (bool): A modal can reduce its complexity
+    - centered (bool): A modal can be vertically centered in the viewport
     - children (node): Primary content.
     - className (string): Additional classes.
     - closeIcon (node|object|bool): Shorthand for the close icon. Closes the modal on click. ()
@@ -1500,7 +1527,7 @@
     - closeOnDocumentClick (bool): Whether or not the Modal should close when the document is clicked.
     - content (custom): Simple text content for the Modal.
     - defaultOpen (bool): Initial value of open.
-    - dimmer (bool|enum): A Modal can appear in a dimmer. (inverted, blurring)
+    - dimmer (enum): A Modal can appear in a dimmer. (true, inverted, blurring)
     - eventPool (string): Event pool namespace that is used to handle component events
     - header (custom): Modal displayed above the content in bold.
     - mountNode (any): The node where the modal should mount. Defaults to document.body.
@@ -1606,6 +1633,7 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Simple text content for the popover.
+    - context (object): Existing element the pop-up should be bound to.
     - flowing (bool): A flowing Popup has no maximum width and continues to flow to fit its content.
     - header (custom): Header displayed above the content in bold.
     - hideOnScroll (bool): Hide the Popup when scrolling the window.
@@ -1651,11 +1679,9 @@
 
   Props:
     - children (node): Primary content.
-    - className (string): Additional classes.
     - closeOnDocumentClick (bool): Controls whether or not the portal should close when the document is clicked.
     - closeOnEscape (bool): Controls whether or not the portal should close when escape is pressed is displayed.
     - closeOnPortalMouseLeave (bool): Controls whether or not the portal should close when mousing out of the portal.
-    - closeOnRootNodeClick (bool): Controls whether or not the portal should close on a click on the portal background.
     - closeOnTriggerBlur (bool): Controls whether or not the portal should close on blur of the trigger.
     - closeOnTriggerClick (bool): Controls whether or not the portal should close on click of the trigger.
     - closeOnTriggerMouseLeave (bool): Controls whether or not the portal should close when mousing out of the trigger.
@@ -1665,16 +1691,26 @@
     - mouseEnterDelay (number): Milliseconds to wait before opening on mouse over
     - mouseLeaveDelay (number): Milliseconds to wait before closing on mouse leave
     - onClose (func): Called when a close event happens
-    - onMount (func): Called when the portal is mounted on the DOM
+    - onMount (func): Called when the portal is mounted on the DOM.
     - onOpen (func): Called when an open event happens
-    - onUnmount (func): Called when the portal is unmounted from the DOM
+    - onUnmount (func): Called when the portal is unmounted from the DOM.
     - open (bool): Controls whether or not the portal is displayed.
     - openOnTriggerClick (bool): Controls whether or not the portal should open when the trigger is clicked.
     - openOnTriggerFocus (bool): Controls whether or not the portal should open on focus of the trigger.
     - openOnTriggerMouseEnter (bool): Controls whether or not the portal should open when mousing over the trigger.
-    - prepend (bool): Controls whether the portal should be prepended to the mountNode instead of appended.
-    - trigger (node): Element to be rendered in-place where the portal is defined."
+    - trigger (node): Element to be rendered in-place where the portal is defined.
+    - triggerRef (func): Called with a ref to the trigger node."
   (sui-factory "Portal"))
+
+(def ui-portal-inner
+  "An inner component that allows you to render children outside their parent.
+
+  Props:
+    - children (node): Primary content.
+    - mountNode (any): The node where the portal should mount.
+    - onMount (func): Called when the portal is mounted on the DOM
+    - onUnmount (func): Called when the portal is unmounted from the DOM"
+  (sui-factory "PortalInner"))
 
 (def ui-progress
   "A progress bar shows the progression of a task.
@@ -1930,7 +1966,7 @@
   "A Select is sugar for <Dropdown selection />.
 
   Props:
-    - "
+    - options (arrayOf): Array of Dropdown.Item props e.g. `{ text: '', value: '' }` ([:name \"shape\"], [:value \"Dropdown.Item.propTypes\"], [:computed true])"
   (sui-factory "Select"))
 
 (def ui-sidebar
@@ -1942,8 +1978,12 @@
     - children (node): Primary content.
     - className (string): Additional classes.
     - content (custom): Shorthand for primary content.
-    - defaultVisible (bool): Initial value of visible.
     - direction (enum): Direction the sidebar should appear on. (top, right, bottom, left)
+    - duration (number|string): Duration of sidebar animation. ()
+    - onHidden (func): Called after a sidebar has finished animating out.
+    - onHide (func): Called before a sidebar begins to animate out.
+    - onShow (func): Called when a sidebar has finished animating in.
+    - onVisible (func): Called when a sidebar begins animating in.
     - visible (bool): Controls whether or not the sidebar is visible on the page.
     - width (enum): Sidebar width. (very thin, thin, wide, very wide)"
   (sui-factory "Sidebar"))
@@ -2123,22 +2163,11 @@
     - defaultActiveIndex (number|string): The initial activeIndex. ()
     - grid (object): Shorthand props for the Grid.
     - menu (object): Shorthand props for the Menu.
+    - menuPosition (enum): Align vertical menu (left, right)
     - onTabChange (func): Called on tab change.
     - panes (arrayOf): Array of objects describing each Menu.Item and Tab.Pane: ([:name \"shape\"], [:value {:menuItem {:name \"custom\", :raw \"customPropTypes.itemShorthand\", :required false}, :pane {:name \"custom\", :raw \"customPropTypes.itemShorthand\", :required false}, :render {:name \"func\", :required false}}])
     - renderActiveOnly (bool): A Tab can render only active pane."
   (sui-factory "Tab"))
-
-(def ui-tab-pane
-  "A tab pane holds the content of a tab.
-
-  Props:
-    - active (bool): A tab pane can be active.
-    - as (custom): An element type to render as (string or function).
-    - children (node): Primary content.
-    - className (string): Additional classes.
-    - content (custom): Shorthand for primary content.
-    - loading (bool): A Tab.Pane can display a loading indicator."
-  (sui-factory "TabPane"))
 
 (def ui-table
   "A table displays a collections of data grouped into rows.
@@ -2252,6 +2281,18 @@
     - warning (bool): A row may warn a user."
   (sui-factory "TableRow"))
 
+(def ui-tab-pane
+  "A tab pane holds the content of a tab.
+
+  Props:
+    - active (bool): A tab pane can be active.
+    - as (custom): An element type to render as (string or function).
+    - children (node): Primary content.
+    - className (string): Additional classes.
+    - content (custom): Shorthand for primary content.
+    - loading (bool): A Tab.Pane can display a loading indicator."
+  (sui-factory "TabPane"))
+
 (def ui-text-area
   "A TextArea can be used to allow for extended user input.
 
@@ -2269,7 +2310,7 @@
   "A transition is an animation usually used to move content in or out of view.
 
   Props:
-    - animation (enum): Named animation event to used. Must be defined in CSS. (browse, browse right, drop, fade, fade up, fade down, fade left, fade right, fly up, fly down, fly left, fly right, horizontal flip, vertical flip, scale, slide up, slide down, slide left, slide right, swing up, swing down, swing left, swing right, jiggle, flash, shake, pulse, tada, bounce)
+    - animation (enum): Named animation event to used. Must be defined in CSS. (browse, browse right, drop, fade, fade up, fade down, fade left, fade right, fly up, fly down, fly left, fly right, horizontal flip, vertical flip, scale, slide up, slide down, slide left, slide right, swing up, swing down, swing left, swing right, zoom, jiggle, flash, shake, pulse, tada, bounce, glow)
     - children (element): Primary content.
     - duration (number|shape|string): Duration of the CSS transition animation in milliseconds. ()
     - mountOnShow (bool): Wait until the first \"enter\" transition to mount the component (add it to the DOM).
@@ -2283,16 +2324,6 @@
     - visible (bool): Show the component; triggers the enter or exit animation."
   (sui-factory "Transition"))
 
-(def ui-transition-group
-  "A Transition.Group animates children as they mount and unmount.
-
-  Props:
-    - animation (enum): Named animation event to used. Must be defined in CSS. (browse, browse right, drop, fade, fade up, fade down, fade left, fade right, fly up, fly down, fly left, fly right, horizontal flip, vertical flip, scale, slide up, slide down, slide left, slide right, swing up, swing down, swing left, swing right, jiggle, flash, shake, pulse, tada, bounce)
-    - as (custom): An element type to render as (string or function).
-    - children (node): Primary content.
-    - duration (number|shape|string): Duration of the CSS transition animation in milliseconds. ()"
-  (sui-factory "TransitionGroup"))
-
 (def ui-transitionable-portal
   "A sugar for `Portal` and `Transition`.
 
@@ -2305,6 +2336,16 @@
     - open (bool): Controls whether or not the portal is displayed.
     - transition (object): Transition props."
   (sui-factory "TransitionablePortal"))
+
+(def ui-transition-group
+  "A Transition.Group animates children as they mount and unmount.
+
+  Props:
+    - animation (enum): Named animation event to used. Must be defined in CSS. (browse, browse right, drop, fade, fade up, fade down, fade left, fade right, fly up, fly down, fly left, fly right, horizontal flip, vertical flip, scale, slide up, slide down, slide left, slide right, swing up, swing down, swing left, swing right, zoom, jiggle, flash, shake, pulse, tada, bounce, glow)
+    - as (custom): An element type to render as (string or function).
+    - children (node): Primary content.
+    - duration (number|shape|string): Duration of the CSS transition animation in milliseconds. ()"
+  (sui-factory "TransitionGroup"))
 
 (def ui-visibility
   "Visibility provides a set of callbacks for when a content appears in the viewport.
@@ -2330,5 +2371,6 @@
     - onTopVisible (func): Element's top edge has passed bottom of screen.
     - onTopVisibleReverse (func): Element's top edge has not passed bottom of screen.
     - onUpdate (func): Element's top edge has passed bottom of screen.
-    - once (bool): When set to false a callback will occur each time an element passes the threshold for a condition."
+    - once (bool): When set to false a callback will occur each time an element passes the threshold for a condition.
+    - updateOn (enum): Allows to choose the mode of the position calculations: (events, repaint)"
   (sui-factory "Visibility"))
