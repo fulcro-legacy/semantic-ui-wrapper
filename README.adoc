@@ -1,5 +1,12 @@
 = Semantic UI Wrapper
 
+NOTICE: This library is no longer maintained because there is a better alternative:
+Use `shadow-cljs` for your compiler, and use the NPM modules directly.  The online
+documentation for Semantic and the compiler are quite good, and there is no need to
+maintain these external wrappers like these anymore.  If someone feels the
+docstrings and such are worthwhile to maintain, then I'll gladly add you as a committer
+to this repository for you to maintain.
+
 A library to interface with Semantic UI React. The NPM support in Clojurescript
 is not yet advanced enough to support using Semantic UI directly, and 
 the cljsjs support leaves a few things to be desired:
