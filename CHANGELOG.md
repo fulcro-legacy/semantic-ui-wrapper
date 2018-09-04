@@ -1,3 +1,7 @@
+2.0.1
+-----
+- Fixed dropdown not recognizing children
+
 2.0.0
 -----
 - Updated to latest versions.
