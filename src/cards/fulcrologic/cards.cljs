@@ -51,3 +51,11 @@
     (f/ui-button {} "C")
     (dom/br)
     (f/ui-button {} "D")))
+
+(defcard dropdowns
+  (dom/div
+    (f/ui-dropdown {:text "Hello" :floating true :labeled true :button true}
+      (f/ui-dropdown-menu {:content "Filter by tag"}
+        (f/ui-dropdown-item {} "A")
+        (f/ui-dropdown-item {} "B")
+        (f/ui-dropdown-item {} "C")))))

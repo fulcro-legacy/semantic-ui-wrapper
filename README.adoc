@@ -1,4 +1,38 @@
-= Semantic UI Wrapper
+NOTICE: This library is no longer maintained because there is a better alternative:
+Use `shadow-cljs` for your compiler, and use the NPM modules directly.  The online
+documentation for Semantic and the compiler are quite good, and there is no need to
+maintain these external wrappers like these anymore.  If someone feels the
+docstrings and such are worthwhile to maintain, then I'll gladly add you as a committer
+to this repository for you to maintain.
+
+If you're using Fulcro with `shadow-cljs`, then instead of this library
+you can simply do these steps:
+
+1. `lein new fulcro app shadow-cljs nodemo`
+2. `npm install semantic-ui-react --save`
+3. `npm install`
+
+Then in some namespace:
+
+```
+(ns your-app
+  (:require
+    [fulcro.client.dom :as dom]
+    ["semantic-ui-react" :refer [Dropdown DropdownItem DropdownMenu]]))
+
+(defn ui-dropdown [& args] (dom/macro-create-element Dropdown args))
+(defn ui-dropdown-menu [& args] (dom/macro-create-element DropdownMenu args))
+(defn ui-dropdown-item [& args] (dom/macro-create-element DropdownItem args))
+
+(defsc SomeComponent [this props]
+  (ui-dropdown {:text "Filter"}
+    (ui-dropdown-menu {}
+      (ui-dropdown-item {} "A")
+      (ui-dropdown-item {} "B"))))
+```
+
+
+== Semantic UI Wrapper
 
 A library to interface with Semantic UI React. The NPM support in Clojurescript
 is not yet advanced enough to support using Semantic UI directly, and 
