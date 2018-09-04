@@ -55,7 +55,7 @@
   \"Returns a factory that wraps the given class as an input. Requires that the target item support `:value` as a prop.\"
   [class]
   (let [factory (dom/wrap-form-element class)]
-    (fn [props] (factory (clj->js props)))))
+    (fn [props & children] (apply factory (clj->js props) children))))
 
 (def semantic-ui js/semanticUIReact)
 
