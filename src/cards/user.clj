@@ -92,9 +92,7 @@
 (defn escaped [s] (str/replace s "\"" "\\\""))
 
 (def input-factory-classes
-  #{"Dropdown"
-    "DropdownSearchInput"
-    "Input"
+  #{"Input"
     "Search"
     "TextArea"})
 
