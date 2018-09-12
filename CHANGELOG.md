@@ -1,3 +1,7 @@
+2.0.3
+-----
+- Unwrapped dropdown and search dropdown so events work right
+
 2.0.2
 -----
 - Fixed dropdown not recognizing children
