@@ -581,7 +581,7 @@
     - upward (bool): Controls whether the dropdown will open upward.
     - value (bool|string|number|arrayOf): Current value or value array if multiple. Creates a controlled component. ()
     - wrapSelection (bool): A dropdown will go to the last element when ArrowUp is pressed on the first,"
-  (sui-input-factory "Dropdown"))
+  (sui-factory "Dropdown"))
 
 (def ui-dropdown-divider
   "A dropdown menu can contain dividers to separate related content.
@@ -647,7 +647,7 @@
     - tabIndex (number|string): An input can receive focus. ()
     - type (string): The HTML input type.
     - value (number|string): Stored value. ()"
-  (sui-input-factory "DropdownSearchInput"))
+  (sui-factory "DropdownSearchInput"))
 
 (def ui-embed
   "An embed displays content from other websites like YouTube videos or Google Maps.
