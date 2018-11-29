@@ -1,9 +1,6 @@
-NOTICE: This library is no longer maintained because there is a better alternative:
-Use `shadow-cljs` for your compiler, and use the NPM modules directly.  The online
-documentation for Semantic and the compiler are quite good, and there is no need to
-maintain these external wrappers like these anymore.  If someone feels the
-docstrings and such are worthwhile to maintain, then I'll gladly add you as a committer
-to this repository for you to maintain.
+NOTICE: If you use `shadow-cljs` for your compiler, you can use the NPM modules directly.  The online
+documentation for Semantic and the compiler are quite good. This library is primarily
+useful in that it provides IDE docstrings.
 
 If you're using Fulcro with `shadow-cljs`, then instead of this library
 you can simply do these steps:
@@ -31,6 +28,12 @@ Then in some namespace:
       (ui-dropdown-item {} "B"))))
 ```
 
+You can also require individual *modules* with this approach by 
+doing require on the *module files* instead of the top-level `semantic-ui-react` name, which 
+can result in a much smaller production build.
+
+NOTE: It is possible to do this optimization in this library by splitting things into namespaces that 
+do those requires, if a contributor is interested in helping make that change.
 
 == Semantic UI Wrapper
 
