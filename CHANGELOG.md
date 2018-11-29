@@ -1,3 +1,7 @@
+2.0.4
+-----
+- Updated version and factories
+
 2.0.3
 -----
 - Unwrapped dropdown and search dropdown so events work right
