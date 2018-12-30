@@ -32,9 +32,6 @@ You can also require individual *modules* with this approach by
 doing require on the *module files* instead of the top-level `semantic-ui-react` name, which 
 can result in a much smaller production build.
 
-NOTE: It is possible to do this optimization in this library by splitting things into namespaces that 
-do those requires, if a contributor is interested in helping make that change.
-
 == Semantic UI Wrapper
 
 A library to interface with Semantic UI React. The NPM support in Clojurescript
@@ -55,7 +52,7 @@ package that makes it a bit easier to use:
 
 == Usage
 
-1. Add the dependency to you project. Be sure to include your desired version of semantic-ui-react as well. The latest
+1. Add the dependency to your project. Be sure to include your desired version of semantic-ui-react as well. The latest
 version of both are:
 +
 image::https://img.shields.io/clojars/v/fulcrologic/semantic-ui-react-wrappers.svg[link="https://clojars.org/fulcrologic/semantic-ui-react-wrappers"]
@@ -63,6 +60,7 @@ image::https://img.shields.io/clojars/v/cljsjs/semantic-ui-react.svg[link="https
 +
 2. Make sure you've include the semantic UI CSS (via CDN or by pulling them from that project)
 3. Use the provided factories and icons!
+You can either use the monolithic `factories` namespace which will pull in all of semantic-ui-react
 +
 ```clj
 (ns app.ui
@@ -76,6 +74,21 @@ image::https://img.shields.io/clojars/v/cljsjs/semantic-ui-react.svg[link="https
                   :labelPosition "left"})
 ...
 ```
+or use individual modules
++
+```clj
+(ns app.ui
+  (:require [fulcrologic.semantic-ui.modules.button :refer [ui-button]
+            [fulcrologic.semantic-ui.icons :as i])
+
+...
+(ui-button {:content       "Like"
+            :icon          i/heart-icon
+            :label         {:as "a" :basic true :pointing "right" :content "2,000"}
+            :labelPosition "left"})
+...
+```
+
 
 == Porting from Semantic UI React Documentation Examples
 
@@ -129,9 +142,9 @@ This library:
 
 == Elements, Modules, etc.
 
-The wrappers in the `factories` namespace create low-level React elements,
-which use Javascript objects for their props. The docstrings on these
-symbols are derived from the JSON docstrings extracted from the real
+The wrappers in the `factories` and `modules.*` namespace create low-level 
+React elements, which use Javascript objects for their props. The docstrings 
+on these symbols are derived from the JSON docstrings extracted from the real
 semantic-ui-react library.
 
 == Icons
@@ -176,12 +189,12 @@ Om have direct dependencies on React, as does the cljsjs semantic ui package.
                                                                :global-exports {cljsjs.react.dom ReactDOM}}]
                                        ;; STEP 3: Add in the correct NPM dependencies
                                        :install-deps         true
-                                       :npm-deps             {:react                             "15.5.4"
-                                                              :react-dom                         "15.5.4"}}}]}
+                                       :npm-deps             {:react                             "16.3.0"
+                                                              :react-dom                         "16.3.0"}}}]}
 ...
 ```
 
-== Using With shadow-cljs
+== Using with shadow-cljs
 
 Shadow-cljs is highly recommended. It has much better integration with the NPM ecosystem, which allows you to easily
 upgrade your semantic-ui-react dependency without worrying about cljsjs at all. Simply add semantic-ui-react
@@ -190,6 +203,12 @@ to your `package.json`:
 ```
 $ npm install --save-dev semantic-ui-react
 ```
+
+== Example workspaces
+
+There are some examples of usage in cards in the src/workspaces folder. To view these, run
+`npx shadow-cljs server` and browse to (http://localhost:8023)[http://localhost:8023]. Help is
+welcome in expanding the coverage of the examples!
 
 == Contributing
 
