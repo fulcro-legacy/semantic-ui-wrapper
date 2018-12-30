@@ -1,0 +1,37 @@
+{:lein   {:profile "cljs,dev"}
+ :nrepl  {:port 9000}
+ :builds {
+          ; :main       {:target     :browser
+          ;              :output-dir "resources/public/js/main"
+          ;              :asset-path "/js/main"
+
+          ;              :modules    {:main {:entries [flexitradie.client]}}
+
+          ;              :devtools   {:after-load flexitradie.client/start
+          ;                           :preloads   [fulcro.inspect.preload flexitradie.development-preload]}}
+
+          ; :test       {:target           :browser-test
+          ;              :test-dir         "resources/public/js/test"
+          ;              :ns-regexp        "-spec$"
+          ;              :compiler-options {:static-fns false ; required for mocking to work
+          ;                                 }
+          ;              :runner-ns        flexitradie.client-test-main
+          ;              :devtools         {:http-port          8022
+          ;                                 :http-resource-root "public"
+          ;                                 :http-root          "resources/public/js/test"}}
+
+          ; :ci-tests   {:target           :karma
+          ;              :js-options       {:js-provider :shadow}
+          ;              :compiler-options {:static-fns false} ; required for mocking to work
+          ;              :output-to        "target/ci.js"
+          ;              :ns-regexp        "-spec$"}
+
+          :workspaces {:target     :browser
+                       :output-dir "resources/public/js/workspaces"
+                       :asset-path "/js/workspaces"
+                       :devtools   {:preloads           [fulcro.inspect.preload]
+                                    :http-root          "resources/public"
+                                    :http-port          8023
+                                    :http-resource-root "."}
+                       :modules    {:main {:entries [fulcrologic.semantic-ui.workspaces-main]}}}}}
+
