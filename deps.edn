@@ -1,0 +1,7 @@
+{:paths   ["src/main" "src/dev"]
+ :deps    {}
+ :aliases {:provided {:extra-deps {org.clojure/clojure       {:mvn/version "1.10.0" :scope "provided"}
+                                   org.clojure/clojurescript {:mvn/version "1.10.520" :scope "provided"}
+                                   com.fulcrologic/fulcro    {:mvn/version "3.0.0-alpha-9-SNAPSHOT" :scope "provided"}}}
+           :dev      {:extra-paths ["src/workspaces"]
+                      :extra-deps  {}}}}

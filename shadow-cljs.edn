@@ -1,9 +1,9 @@
-{:lein   {:profile "dev"}
+{:deps   {:aliases [:provided :dev]}
  :nrepl  {:port 9000}
  :builds {:workspaces {:target     :browser
                        :output-dir "resources/public/js/workspaces"
                        :asset-path "/js/workspaces"
-                       :devtools   {:preloads           [fulcro.inspect.preload]
+                       :devtools   {:preloads           [com.fulcrologic.fulcro.inspect.preload]
                                     :http-root          "resources/public"
                                     :http-port          8023
                                     :http-resource-root "."}
