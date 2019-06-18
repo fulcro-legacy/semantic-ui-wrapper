@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.collections.form.ui-form-text-area
+(ns com.fulcrologic.semantic-ui.collections.form.ui-form-text-area
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/collections/Form/FormTextArea" :default FormTextArea]))
 
   (def ui-form-text-area

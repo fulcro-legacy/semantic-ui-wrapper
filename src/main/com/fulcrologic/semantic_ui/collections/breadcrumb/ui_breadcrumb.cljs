@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.collections.breadcrumb.ui-breadcrumb
+(ns com.fulcrologic.semantic-ui.collections.breadcrumb.ui-breadcrumb
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/collections/Breadcrumb/Breadcrumb" :default Breadcrumb]))
 
   (def ui-breadcrumb

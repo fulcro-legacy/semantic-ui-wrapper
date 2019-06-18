@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.elements.icon.ui-icon-group
+(ns com.fulcrologic.semantic-ui.elements.icon.ui-icon-group
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/elements/Icon/IconGroup" :default IconGroup]))
 
   (def ui-icon-group

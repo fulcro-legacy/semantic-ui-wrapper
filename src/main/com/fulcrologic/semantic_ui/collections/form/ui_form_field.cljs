@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.collections.form.ui-form-field
+(ns com.fulcrologic.semantic-ui.collections.form.ui-form-field
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/collections/Form/FormField" :default FormField]))
 
   (def ui-form-field

@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.modules.popup.ui-popup
+(ns com.fulcrologic.semantic-ui.modules.popup.ui-popup
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/modules/Popup/Popup" :default Popup]))
 
   (def ui-popup

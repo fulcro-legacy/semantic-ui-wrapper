@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.modules.dropdown.ui-dropdown-header
+(ns com.fulcrologic.semantic-ui.modules.dropdown.ui-dropdown-header
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/modules/Dropdown/DropdownHeader" :default DropdownHeader]))
 
   (def ui-dropdown-header

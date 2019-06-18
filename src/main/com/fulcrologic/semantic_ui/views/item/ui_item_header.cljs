@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.views.item.ui-item-header
+(ns com.fulcrologic.semantic-ui.views.item.ui-item-header
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/views/Item/ItemHeader" :default ItemHeader]))
 
   (def ui-item-header

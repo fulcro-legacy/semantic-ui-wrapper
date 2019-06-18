@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.views.card.ui-card-content
+(ns com.fulcrologic.semantic-ui.views.card.ui-card-content
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/views/Card/CardContent" :default CardContent]))
 
   (def ui-card-content

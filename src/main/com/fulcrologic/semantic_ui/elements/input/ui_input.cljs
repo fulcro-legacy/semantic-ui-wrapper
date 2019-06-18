@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.elements.input.ui-input
+(ns com.fulcrologic.semantic-ui.elements.input.ui-input
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/elements/Input/Input" :default Input]))
 
   (def ui-input

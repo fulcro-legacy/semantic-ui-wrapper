@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.elements.placeholder.ui-placeholder-image
+(ns com.fulcrologic.semantic-ui.elements.placeholder.ui-placeholder-image
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/elements/Placeholder/PlaceholderImage" :default PlaceholderImage]))
 
   (def ui-placeholder-image

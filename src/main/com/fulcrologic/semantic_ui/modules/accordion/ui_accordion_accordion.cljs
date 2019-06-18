@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.modules.accordion.ui-accordion-accordion
+(ns com.fulcrologic.semantic-ui.modules.accordion.ui-accordion-accordion
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/modules/Accordion/AccordionAccordion" :default AccordionAccordion]))
 
   (def ui-accordion-accordion

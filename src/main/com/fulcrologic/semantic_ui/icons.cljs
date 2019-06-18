@@ -1,4 +1,4 @@
-(ns fulcrologic.semantic-ui.icons)
+(ns com.fulcrologic.semantic-ui.icons)
 
 (def _500px-icon "500px")
 (def accessible-icon "accessible")

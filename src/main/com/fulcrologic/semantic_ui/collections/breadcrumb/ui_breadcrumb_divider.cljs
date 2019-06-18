@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.collections.breadcrumb.ui-breadcrumb-divider
+(ns com.fulcrologic.semantic-ui.collections.breadcrumb.ui-breadcrumb-divider
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/collections/Breadcrumb/BreadcrumbDivider" :default BreadcrumbDivider]))
 
   (def ui-breadcrumb-divider

@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.views.feed.ui-feed-event
+(ns com.fulcrologic.semantic-ui.views.feed.ui-feed-event
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/views/Feed/FeedEvent" :default FeedEvent]))
 
   (def ui-feed-event

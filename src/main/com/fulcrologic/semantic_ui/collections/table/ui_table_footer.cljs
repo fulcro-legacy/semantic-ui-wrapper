@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.collections.table.ui-table-footer
+(ns com.fulcrologic.semantic-ui.collections.table.ui-table-footer
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/collections/Table/TableFooter" :default TableFooter]))
 
   (def ui-table-footer

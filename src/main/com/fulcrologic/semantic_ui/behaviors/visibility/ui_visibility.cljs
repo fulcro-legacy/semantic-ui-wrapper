@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.behaviors.visibility.ui-visibility
+(ns com.fulcrologic.semantic-ui.behaviors.visibility.ui-visibility
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/behaviors/Visibility/Visibility" :default Visibility]))
 
   (def ui-visibility

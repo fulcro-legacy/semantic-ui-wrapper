@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.views.card.ui-card-group
+(ns com.fulcrologic.semantic-ui.views.card.ui-card-group
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/views/Card/CardGroup" :default CardGroup]))
 
   (def ui-card-group

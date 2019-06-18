@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.collections.form.ui-form-radio
+(ns com.fulcrologic.semantic-ui.collections.form.ui-form-radio
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/collections/Form/FormRadio" :default FormRadio]))
 
   (def ui-form-radio

@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.elements.label.ui-label-group
+(ns com.fulcrologic.semantic-ui.elements.label.ui-label-group
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/elements/Label/LabelGroup" :default LabelGroup]))
 
   (def ui-label-group

@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.elements.list.ui-list-description
+(ns com.fulcrologic.semantic-ui.elements.list.ui-list-description
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/elements/List/ListDescription" :default ListDescription]))
 
   (def ui-list-description

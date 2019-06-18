@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.modules.progress.ui-progress
+(ns com.fulcrologic.semantic-ui.modules.progress.ui-progress
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/modules/Progress/Progress" :default Progress]))
 
   (def ui-progress

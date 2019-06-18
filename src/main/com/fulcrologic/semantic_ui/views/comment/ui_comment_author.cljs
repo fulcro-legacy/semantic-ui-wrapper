@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.views.comment.ui-comment-author
+(ns com.fulcrologic.semantic-ui.views.comment.ui-comment-author
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/views/Comment/CommentAuthor" :default CommentAuthor]))
 
   (def ui-comment-author

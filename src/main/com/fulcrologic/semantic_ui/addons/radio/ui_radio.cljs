@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.addons.radio.ui-radio
+(ns com.fulcrologic.semantic-ui.addons.radio.ui-radio
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/addons/Radio/Radio" :default Radio]))
 
   (def ui-radio

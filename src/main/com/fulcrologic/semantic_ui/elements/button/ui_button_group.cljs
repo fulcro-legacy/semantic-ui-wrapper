@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.elements.button.ui-button-group
+(ns com.fulcrologic.semantic-ui.elements.button.ui-button-group
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/elements/Button/ButtonGroup" :default ButtonGroup]))
 
   (def ui-button-group

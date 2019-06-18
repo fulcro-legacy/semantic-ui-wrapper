@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.collections.table.ui-table-header-cell
+(ns com.fulcrologic.semantic-ui.collections.table.ui-table-header-cell
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/collections/Table/TableHeaderCell" :default TableHeaderCell]))
 
   (def ui-table-header-cell

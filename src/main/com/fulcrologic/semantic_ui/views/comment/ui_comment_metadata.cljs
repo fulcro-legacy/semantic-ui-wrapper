@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.views.comment.ui-comment-metadata
+(ns com.fulcrologic.semantic-ui.views.comment.ui-comment-metadata
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/views/Comment/CommentMetadata" :default CommentMetadata]))
 
   (def ui-comment-metadata

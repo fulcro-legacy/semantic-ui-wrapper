@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.views.item.ui-item-content
+(ns com.fulcrologic.semantic-ui.views.item.ui-item-content
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/views/Item/ItemContent" :default ItemContent]))
 
   (def ui-item-content

@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.elements.container.ui-container
+(ns com.fulcrologic.semantic-ui.elements.container.ui-container
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/elements/Container/Container" :default Container]))
 
   (def ui-container

@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.modules.modal.ui-modal-header
+(ns com.fulcrologic.semantic-ui.modules.modal.ui-modal-header
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/modules/Modal/ModalHeader" :default ModalHeader]))
 
   (def ui-modal-header

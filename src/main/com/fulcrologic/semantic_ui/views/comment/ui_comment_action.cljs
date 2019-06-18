@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.views.comment.ui-comment-action
+(ns com.fulcrologic.semantic-ui.views.comment.ui-comment-action
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/views/Comment/CommentAction" :default CommentAction]))
 
   (def ui-comment-action

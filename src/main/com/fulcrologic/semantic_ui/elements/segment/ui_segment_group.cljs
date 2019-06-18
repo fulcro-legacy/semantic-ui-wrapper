@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.elements.segment.ui-segment-group
+(ns com.fulcrologic.semantic-ui.elements.segment.ui-segment-group
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/elements/Segment/SegmentGroup" :default SegmentGroup]))
 
   (def ui-segment-group

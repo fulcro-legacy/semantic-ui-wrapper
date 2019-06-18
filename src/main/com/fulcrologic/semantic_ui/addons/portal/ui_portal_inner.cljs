@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.addons.portal.ui-portal-inner
+(ns com.fulcrologic.semantic-ui.addons.portal.ui-portal-inner
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/addons/Portal/PortalInner" :default PortalInner]))
 
   (def ui-portal-inner

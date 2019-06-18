@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.addons.ref.ui-ref
+(ns com.fulcrologic.semantic-ui.addons.ref.ui-ref
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/addons/Ref/Ref" :default Ref]))
 
   (def ui-ref

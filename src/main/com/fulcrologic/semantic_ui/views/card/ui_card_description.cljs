@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.views.card.ui-card-description
+(ns com.fulcrologic.semantic-ui.views.card.ui-card-description
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/views/Card/CardDescription" :default CardDescription]))
 
   (def ui-card-description

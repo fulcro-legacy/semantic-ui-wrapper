@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.addons.confirm.ui-confirm
+(ns com.fulcrologic.semantic-ui.addons.confirm.ui-confirm
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/addons/Confirm/Confirm" :default Confirm]))
 
   (def ui-confirm

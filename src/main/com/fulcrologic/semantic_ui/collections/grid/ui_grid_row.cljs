@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.collections.grid.ui-grid-row
+(ns com.fulcrologic.semantic-ui.collections.grid.ui-grid-row
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/collections/Grid/GridRow" :default GridRow]))
 
   (def ui-grid-row

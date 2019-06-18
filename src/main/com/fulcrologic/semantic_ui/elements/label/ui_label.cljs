@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.elements.label.ui-label
+(ns com.fulcrologic.semantic-ui.elements.label.ui-label
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/elements/Label/Label" :default Label]))
 
   (def ui-label

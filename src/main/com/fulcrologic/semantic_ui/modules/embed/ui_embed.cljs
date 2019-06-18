@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.modules.embed.ui-embed
+(ns com.fulcrologic.semantic-ui.modules.embed.ui-embed
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/modules/Embed/Embed" :default Embed]))
 
   (def ui-embed

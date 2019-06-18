@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.addons.transitionableportal.ui-transitionable-portal
+(ns com.fulcrologic.semantic-ui.addons.transitionableportal.ui-transitionable-portal
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/addons/TransitionablePortal/TransitionablePortal" :default TransitionablePortal]))
 
   (def ui-transitionable-portal

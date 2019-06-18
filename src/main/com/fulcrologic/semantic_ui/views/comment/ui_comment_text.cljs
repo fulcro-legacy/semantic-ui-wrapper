@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.views.comment.ui-comment-text
+(ns com.fulcrologic.semantic-ui.views.comment.ui-comment-text
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/views/Comment/CommentText" :default CommentText]))
 
   (def ui-comment-text

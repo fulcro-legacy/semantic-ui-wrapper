@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.addons.mountnode.ui-mount-node
+(ns com.fulcrologic.semantic-ui.addons.mountnode.ui-mount-node
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/addons/MountNode/MountNode" :default MountNode]))
 
   (def ui-mount-node

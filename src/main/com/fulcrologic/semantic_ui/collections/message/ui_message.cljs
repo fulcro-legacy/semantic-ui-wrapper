@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.collections.message.ui-message
+(ns com.fulcrologic.semantic-ui.collections.message.ui-message
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/collections/Message/Message" :default Message]))
 
   (def ui-message

@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.views.feed.ui-feed-date
+(ns com.fulcrologic.semantic-ui.views.feed.ui-feed-date
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/views/Feed/FeedDate" :default FeedDate]))
 
   (def ui-feed-date

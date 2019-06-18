@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.views.statistic.ui-statistic-value
+(ns com.fulcrologic.semantic-ui.views.statistic.ui-statistic-value
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/views/Statistic/StatisticValue" :default StatisticValue]))
 
   (def ui-statistic-value

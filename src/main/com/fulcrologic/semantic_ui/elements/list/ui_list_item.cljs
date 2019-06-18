@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.elements.list.ui-list-item
+(ns com.fulcrologic.semantic-ui.elements.list.ui-list-item
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/elements/List/ListItem" :default ListItem]))
 
   (def ui-list-item

@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.modules.popup.ui-popup-header
+(ns com.fulcrologic.semantic-ui.modules.popup.ui-popup-header
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/modules/Popup/PopupHeader" :default PopupHeader]))
 
   (def ui-popup-header

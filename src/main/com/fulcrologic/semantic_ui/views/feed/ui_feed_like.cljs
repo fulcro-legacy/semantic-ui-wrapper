@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.views.feed.ui-feed-like
+(ns com.fulcrologic.semantic-ui.views.feed.ui-feed-like
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/views/Feed/FeedLike" :default FeedLike]))
 
   (def ui-feed-like

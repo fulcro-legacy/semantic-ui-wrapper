@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.modules.accordion.ui-accordion-title
+(ns com.fulcrologic.semantic-ui.modules.accordion.ui-accordion-title
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/modules/Accordion/AccordionTitle" :default AccordionTitle]))
 
   (def ui-accordion-title

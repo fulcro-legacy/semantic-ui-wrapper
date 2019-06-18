@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.elements.step.ui-step
+(ns com.fulcrologic.semantic-ui.elements.step.ui-step
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/elements/Step/Step" :default Step]))
 
   (def ui-step

@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.modules.rating.ui-rating
+(ns com.fulcrologic.semantic-ui.modules.rating.ui-rating
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/modules/Rating/Rating" :default Rating]))
 
   (def ui-rating

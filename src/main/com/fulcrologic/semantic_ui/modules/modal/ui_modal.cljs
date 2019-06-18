@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.modules.modal.ui-modal
+(ns com.fulcrologic.semantic-ui.modules.modal.ui-modal
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/modules/Modal/Modal" :default Modal]))
 
   (def ui-modal

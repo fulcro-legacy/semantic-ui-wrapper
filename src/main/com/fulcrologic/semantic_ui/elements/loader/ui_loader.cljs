@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.elements.loader.ui-loader
+(ns com.fulcrologic.semantic-ui.elements.loader.ui-loader
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/elements/Loader/Loader" :default Loader]))
 
   (def ui-loader

@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.addons.textarea.ui-text-area
+(ns com.fulcrologic.semantic-ui.addons.textarea.ui-text-area
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/addons/TextArea/TextArea" :default TextArea]))
 
   (def ui-text-area

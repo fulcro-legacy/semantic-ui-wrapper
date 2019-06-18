@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.modules.search.ui-search-category
+(ns com.fulcrologic.semantic-ui.modules.search.ui-search-category
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/modules/Search/SearchCategory" :default SearchCategory]))
 
   (def ui-search-category

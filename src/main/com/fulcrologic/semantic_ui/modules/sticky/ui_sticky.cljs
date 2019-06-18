@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.modules.sticky.ui-sticky
+(ns com.fulcrologic.semantic-ui.modules.sticky.ui-sticky
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/modules/Sticky/Sticky" :default Sticky]))
 
   (def ui-sticky

@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.views.advertisement.ui-advertisement
+(ns com.fulcrologic.semantic-ui.views.advertisement.ui-advertisement
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/views/Advertisement/Advertisement" :default Advertisement]))
 
   (def ui-advertisement

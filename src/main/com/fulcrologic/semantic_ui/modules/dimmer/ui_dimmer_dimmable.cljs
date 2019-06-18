@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.modules.dimmer.ui-dimmer-dimmable
+(ns com.fulcrologic.semantic-ui.modules.dimmer.ui-dimmer-dimmable
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/modules/Dimmer/DimmerDimmable" :default DimmerDimmable]))
 
   (def ui-dimmer-dimmable

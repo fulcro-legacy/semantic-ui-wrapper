@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.collections.grid.ui-grid-column
+(ns com.fulcrologic.semantic-ui.collections.grid.ui-grid-column
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/collections/Grid/GridColumn" :default GridColumn]))
 
   (def ui-grid-column

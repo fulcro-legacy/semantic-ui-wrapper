@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.views.statistic.ui-statistic-label
+(ns com.fulcrologic.semantic-ui.views.statistic.ui-statistic-label
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/views/Statistic/StatisticLabel" :default StatisticLabel]))
 
   (def ui-statistic-label

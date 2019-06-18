@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.elements.image.ui-image
+(ns com.fulcrologic.semantic-ui.elements.image.ui-image
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/elements/Image/Image" :default Image]))
 
   (def ui-image

@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.collections.menu.ui-menu-item
+(ns com.fulcrologic.semantic-ui.collections.menu.ui-menu-item
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/collections/Menu/MenuItem" :default MenuItem]))
 
   (def ui-menu-item

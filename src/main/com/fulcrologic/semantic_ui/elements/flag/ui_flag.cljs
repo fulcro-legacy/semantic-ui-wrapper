@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.elements.flag.ui-flag
+(ns com.fulcrologic.semantic-ui.elements.flag.ui-flag
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/elements/Flag/Flag" :default Flag]))
 
   (def ui-flag

@@ -1,4 +1,4 @@
-(ns fulcrologic.semantic-ui.factory-helpers
+(ns com.fulcrologic.semantic-ui.factory-helpers
   (:require
     [goog.object :as gobj]
     [com.fulcrologic.fulcro.dom :as dom]))

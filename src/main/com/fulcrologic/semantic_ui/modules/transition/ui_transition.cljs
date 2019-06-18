@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.modules.transition.ui-transition
+(ns com.fulcrologic.semantic-ui.modules.transition.ui-transition
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/modules/Transition/Transition" :default Transition]))
 
   (def ui-transition

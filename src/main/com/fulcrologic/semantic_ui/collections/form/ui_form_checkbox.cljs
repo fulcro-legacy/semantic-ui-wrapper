@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.collections.form.ui-form-checkbox
+(ns com.fulcrologic.semantic-ui.collections.form.ui-form-checkbox
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/collections/Form/FormCheckbox" :default FormCheckbox]))
 
   (def ui-form-checkbox

@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.addons.pagination.ui-pagination
+(ns com.fulcrologic.semantic-ui.addons.pagination.ui-pagination
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/addons/Pagination/Pagination" :default Pagination]))
 
   (def ui-pagination

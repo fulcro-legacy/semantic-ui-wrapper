@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.elements.placeholder.ui-placeholder-header
+(ns com.fulcrologic.semantic-ui.elements.placeholder.ui-placeholder-header
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/elements/Placeholder/PlaceholderHeader" :default PlaceholderHeader]))
 
   (def ui-placeholder-header

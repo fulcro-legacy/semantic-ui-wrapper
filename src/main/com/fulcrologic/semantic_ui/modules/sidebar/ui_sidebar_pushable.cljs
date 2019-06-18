@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.modules.sidebar.ui-sidebar-pushable
+(ns com.fulcrologic.semantic-ui.modules.sidebar.ui-sidebar-pushable
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/modules/Sidebar/SidebarPushable" :default SidebarPushable]))
 
   (def ui-sidebar-pushable

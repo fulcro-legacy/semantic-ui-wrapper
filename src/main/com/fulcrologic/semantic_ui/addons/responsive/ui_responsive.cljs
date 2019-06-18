@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.addons.responsive.ui-responsive
+(ns com.fulcrologic.semantic-ui.addons.responsive.ui-responsive
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/addons/Responsive/Responsive" :default Responsive]))
 
   (def ui-responsive

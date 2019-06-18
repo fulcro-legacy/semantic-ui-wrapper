@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.modules.tab.ui-tab-pane
+(ns com.fulcrologic.semantic-ui.modules.tab.ui-tab-pane
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/modules/Tab/TabPane" :default TabPane]))
 
   (def ui-tab-pane

@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.collections.form.ui-form-select
+(ns com.fulcrologic.semantic-ui.collections.form.ui-form-select
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/collections/Form/FormSelect" :default FormSelect]))
 
   (def ui-form-select

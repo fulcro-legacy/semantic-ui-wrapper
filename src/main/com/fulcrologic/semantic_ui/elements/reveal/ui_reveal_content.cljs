@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.elements.reveal.ui-reveal-content
+(ns com.fulcrologic.semantic-ui.elements.reveal.ui-reveal-content
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/elements/Reveal/RevealContent" :default RevealContent]))
 
   (def ui-reveal-content

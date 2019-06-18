@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.collections.form.ui-form-dropdown
+(ns com.fulcrologic.semantic-ui.collections.form.ui-form-dropdown
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/collections/Form/FormDropdown" :default FormDropdown]))
 
   (def ui-form-dropdown

@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.modules.sidebar.ui-sidebar
+(ns com.fulcrologic.semantic-ui.modules.sidebar.ui-sidebar
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/modules/Sidebar/Sidebar" :default Sidebar]))
 
   (def ui-sidebar

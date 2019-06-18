@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.elements.placeholder.ui-placeholder-line
+(ns com.fulcrologic.semantic-ui.elements.placeholder.ui-placeholder-line
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/elements/Placeholder/PlaceholderLine" :default PlaceholderLine]))
 
   (def ui-placeholder-line

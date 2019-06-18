@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.addons.select.ui-select
+(ns com.fulcrologic.semantic-ui.addons.select.ui-select
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/addons/Select/Select" :default Select]))
 
   (def ui-select

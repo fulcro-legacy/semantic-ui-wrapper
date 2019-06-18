@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.elements.header.ui-header
+(ns com.fulcrologic.semantic-ui.elements.header.ui-header
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/elements/Header/Header" :default Header]))
 
   (def ui-header

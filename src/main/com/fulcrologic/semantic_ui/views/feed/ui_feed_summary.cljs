@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.views.feed.ui-feed-summary
+(ns com.fulcrologic.semantic-ui.views.feed.ui-feed-summary
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/views/Feed/FeedSummary" :default FeedSummary]))
 
   (def ui-feed-summary

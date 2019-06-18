@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.elements.placeholder.ui-placeholder-paragraph
+(ns com.fulcrologic.semantic-ui.elements.placeholder.ui-placeholder-paragraph
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/elements/Placeholder/PlaceholderParagraph" :default PlaceholderParagraph]))
 
   (def ui-placeholder-paragraph

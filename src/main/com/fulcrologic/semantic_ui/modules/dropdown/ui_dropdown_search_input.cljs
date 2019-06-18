@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.modules.dropdown.ui-dropdown-search-input
+(ns com.fulcrologic.semantic-ui.modules.dropdown.ui-dropdown-search-input
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/modules/Dropdown/DropdownSearchInput" :default DropdownSearchInput]))
 
   (def ui-dropdown-search-input

@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.elements.segment.ui-segment-inline
+(ns com.fulcrologic.semantic-ui.elements.segment.ui-segment-inline
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/elements/Segment/SegmentInline" :default SegmentInline]))
 
   (def ui-segment-inline

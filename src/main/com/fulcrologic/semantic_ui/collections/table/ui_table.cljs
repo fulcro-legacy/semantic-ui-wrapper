@@ -1,6 +1,6 @@
-(ns fulcrologic.semantic-ui.collections.table.ui-table
+(ns com.fulcrologic.semantic-ui.collections.table.ui-table
   (:require
-    [fulcrologic.semantic-ui.factory-helpers :as h]
+    [com.fulcrologic.semantic-ui.factory-helpers :as h]
     ["semantic-ui-react/dist/commonjs/collections/Table/Table" :default Table]))
 
   (def ui-table
